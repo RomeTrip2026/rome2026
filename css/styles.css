@@ -239,7 +239,7 @@ html, body {
 .place-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   padding: 10px 0;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -356,17 +356,44 @@ html, body {
 
 /* ── Popup ── */
 .mapboxgl-popup-content {
-  border-radius: 12px !important;
-  padding: 14px !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
   font-family: inherit;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
-  max-width: 240px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18) !important;
+  max-width: 250px;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
+  top: 8px !important;
+  right: 8px !important;
+  background: #f0f0f0 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background 0.15s !important;
+  padding: 0 !important;
+}
+
+.mapboxgl-popup-close-button::after {
+  content: "\00d7";
+  font-size: 18px;
+  color: #666;
+  line-height: 1;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background: #e0e0e0 !important;
 }
 
 .popup-title {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 4px;
+  padding-right: 28px;
 }
 
 .popup-desc {
@@ -379,27 +406,28 @@ html, body {
 .popup-time {
   font-size: 12px;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .popup-actions {
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
 .popup-btn {
   flex: 1;
-  padding: 7px 0;
+  padding: 8px 0;
   border: none;
-  border-radius: 8px;
-  font-size: 13px;
+  border-radius: 10px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, transform 0.1s;
 }
 
 .popup-btn:active {
   opacity: 0.7;
+  transform: scale(0.96);
 }
 
 .popup-btn-visited {
@@ -417,14 +445,19 @@ html, body {
   color: #fff;
 }
 
-/* ── Info button ── */
+.popup-btn-info {
+  background: #f0f0f0;
+  color: #555;
+}
+
+/* ── Info button (itinerary) ── */
 .info-btn {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 2px;
   border-radius: 50%;
-  color: #999;
+  color: #bbb;
   flex-shrink: 0;
   transition: color 0.15s, background 0.15s;
   display: flex;
@@ -435,6 +468,10 @@ html, body {
 .info-btn:active {
   background: #f0f0f0;
   color: #555;
+}
+
+.info-btn svg {
+  display: block;
 }
 
 /* ── Info modal ── */

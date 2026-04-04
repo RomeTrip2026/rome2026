@@ -114,11 +114,15 @@ const MapModule = (() => {
       <div class="popup-actions">
         <button class="popup-btn popup-btn-visited ${isVisited ? "checked" : ""}"
                 onclick="App.toggleVisited('${place.id}')">
-          ${isVisited ? "Visitado" : "Marcar visitado"}
+          ${isVisited ? "Visitado" : "Marcar"}
         </button>
         <button class="popup-btn popup-btn-route"
                 onclick="App.requestRoute(${place.lat}, ${place.lng}, '${place.name}')">
           Ruta
+        </button>
+        <button class="popup-btn popup-btn-info"
+                onclick="App.showInfo('${place.id}')">
+          Info
         </button>
       </div>
     `;
