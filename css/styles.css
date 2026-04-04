@@ -91,6 +91,13 @@ html, body {
 
 .fab.open {
   background: #444;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .fab.open {
+    display: flex;
+  }
 }
 
 /* ── Route banner ── */
