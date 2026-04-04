@@ -132,5 +132,51 @@ const Itinerary = (() => {
     return panelOpen;
   }
 
-  return { render, toggle, isOpen, getActiveDay };
+  function setupSwipe() {
+    const panel = panelEl();
+    const list = document.getElementById("itinerary-list");
+    let startY = 0;
+    let currentY = 0;
+    let dragging = false;
+
+    panel.addEventListener("touchstart", (e) => {
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      dragging = false;
+    }, { passive: true });
+
+    panel.addEventListener("touchmove", (e) => {
+      currentY = e.touches[0].clientY;
+      const dy = currentY - startY;
+
+      if (!dragging && dy > 8 && list.scrollTop <= 0) {
+        dragging = true;
+        startY = currentY;
+        panel.style.transition = "none";
+      }
+
+      if (dragging) {
+        const offset = currentY - startY;
+        if (offset > 0) {
+          e.preventDefault();
+          panel.style.transform = `translateY(${offset}px)`;
+        }
+      }
+    }, { passive: false });
+
+    panel.addEventListener("touchend", () => {
+      if (!dragging) return;
+      dragging = false;
+      panel.style.transition = "";
+      const dy = currentY - startY;
+      if (dy > 80) {
+        panel.style.transform = "";
+        toggle();
+      } else {
+        panel.style.transform = "translateY(0)";
+      }
+    });
+  }
+
+  return { render, toggle, isOpen, getActiveDay, setupSwipe };
 })();

@@ -87,8 +87,9 @@ const App = (() => {
     document.getElementById("info-modal-close").addEventListener("click", closeInfo);
     document.querySelector(".info-modal-overlay").addEventListener("click", closeInfo);
 
-    // Swipe-down to dismiss info modal
+    // Swipe-down to dismiss info modal + panel
     setupModalSwipe();
+    Itinerary.setupSwipe();
   }
 
   function filterDay(dayIndex) {
