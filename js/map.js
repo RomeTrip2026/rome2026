@@ -90,6 +90,9 @@ const MapModule = (() => {
         data: { type: "FeatureCollection", features },
       });
 
+      // Fit to all places on load
+      fitToPlaces();
+
       // White border circle
       map.addLayer({
         id: "places-border",
@@ -199,6 +202,27 @@ const MapModule = (() => {
       .addTo(map);
   }
 
+  function fitToPlaces(activeDayIndex, activeCategory) {
+    const coords = [];
+    Object.values(placesIndex).forEach(({ place, dayIndex }) => {
+      const dimmedDay = activeDayIndex !== null && activeDayIndex !== undefined && dayIndex !== activeDayIndex;
+      const dimmedCat = activeCategory !== null && activeCategory !== undefined && place.category !== activeCategory;
+      if (!dimmedDay && !dimmedCat) {
+        coords.push([place.lng, place.lat]);
+      }
+    });
+    if (coords.length === 0) return;
+    if (coords.length === 1) {
+      map.flyTo({ center: coords[0], zoom: 15, duration: 600 });
+      return;
+    }
+    const bounds = coords.reduce(
+      (b, c) => b.extend(c),
+      new mapboxgl.LngLatBounds(coords[0], coords[0])
+    );
+    map.fitBounds(bounds, { padding: 50, duration: 600, maxZoom: 16 });
+  }
+
   function rebuildSource(visitedSet, activeDayIndex, activeCategory) {
     visitedSetRef = visitedSet;
     const source = map.getSource("places");
@@ -214,6 +238,7 @@ const MapModule = (() => {
     });
 
     source.setData({ type: "FeatureCollection", features });
+    fitToPlaces(activeDayIndex, activeCategory);
   }
 
   function closePopup() {
