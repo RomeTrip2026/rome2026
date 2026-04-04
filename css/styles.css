@@ -156,8 +156,11 @@ html, body {
   height: 4px;
   background: #ccc;
   border-radius: 2px;
-  margin: 10px auto 6px;
+  margin: 0 auto;
+  padding: 14px 0;
+  background-clip: content-box;
   flex-shrink: 0;
+  cursor: grab;
 }
 
 /* ── Itinerary list ── */
