@@ -44,7 +44,11 @@
   <div id="info-modal" class="info-modal hidden">
     <div class="info-modal-overlay"></div>
     <div class="info-modal-card">
-      <button id="info-modal-close">&times;</button>
+      <button id="info-modal-close" aria-label="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
       <h2 id="info-modal-title"></h2>
       <div id="info-modal-body"></div>
     </div>

@@ -517,32 +517,36 @@ html, body {
 
 #info-modal-close {
   position: absolute;
-  top: 12px;
-  right: 14px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #f0f0f0;
   border: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-size: 20px;
-  line-height: 1;
+  width: 40px;
+  height: 24px;
+  border-radius: 12px;
   cursor: pointer;
-  color: #666;
+  color: #999;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 
 #info-modal-close:active {
-  background: #ddd;
+  background: #e0e0e0;
+  color: #666;
+}
+
+#info-modal-close svg {
+  display: block;
 }
 
 #info-modal-title {
   font-size: 20px;
   font-weight: 700;
+  margin-top: 20px;
   margin-bottom: 14px;
-  padding-right: 36px;
 }
 
 #info-modal-body {
