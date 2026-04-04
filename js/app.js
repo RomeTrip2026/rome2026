@@ -24,7 +24,7 @@ const App = (() => {
       visitedSet.add(placeId);
     }
     saveVisited();
-    MapModule.rebuildSource(visitedSet);
+    MapModule.rebuildSource(visitedSet, Itinerary.getActiveDay());
     MapModule.closePopup();
     Itinerary.render(TRIP_DATA.days, visitedSet);
   }
@@ -84,8 +84,13 @@ const App = (() => {
     document.getElementById("route-close").addEventListener("click", clearRoute);
   }
 
+  function filterDay(dayIndex) {
+    MapModule.rebuildSource(visitedSet, dayIndex);
+    Itinerary.render(TRIP_DATA.days, visitedSet);
+  }
+
   // Public API
-  return { init, toggleVisited, requestRoute };
+  return { init, toggleVisited, requestRoute, filterDay };
 })();
 
 document.addEventListener("DOMContentLoaded", App.init);
