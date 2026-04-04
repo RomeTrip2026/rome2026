@@ -86,6 +86,9 @@ const App = (() => {
     // Info modal close
     document.getElementById("info-modal-close").addEventListener("click", closeInfo);
     document.querySelector(".info-modal-overlay").addEventListener("click", closeInfo);
+
+    // Swipe-down to dismiss info modal
+    setupModalSwipe();
   }
 
   function filterDay(dayIndex) {
@@ -102,7 +105,49 @@ const App = (() => {
   }
 
   function closeInfo() {
+    const card = document.getElementById("info-modal").querySelector(".info-modal-card");
+    card.style.transform = "";
     document.getElementById("info-modal").classList.add("hidden");
+  }
+
+  function setupModalSwipe() {
+    const card = document.querySelector(".info-modal-card");
+    let startY = 0;
+    let currentY = 0;
+    let dragging = false;
+
+    card.addEventListener("touchstart", (e) => {
+      // Only start drag if scrolled to top or touching near the top handle area
+      if (card.scrollTop > 0) return;
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      dragging = true;
+      card.style.transition = "none";
+    }, { passive: true });
+
+    card.addEventListener("touchmove", (e) => {
+      if (!dragging) return;
+      currentY = e.touches[0].clientY;
+      const dy = currentY - startY;
+      if (dy > 0) {
+        card.style.transform = `translateY(${dy}px)`;
+      } else if (card.scrollTop <= 0) {
+        // Prevent pulling up beyond original position
+        card.style.transform = "translateY(0)";
+      }
+    }, { passive: true });
+
+    card.addEventListener("touchend", () => {
+      if (!dragging) return;
+      dragging = false;
+      card.style.transition = "";
+      const dy = currentY - startY;
+      if (dy > 100) {
+        closeInfo();
+      } else {
+        card.style.transform = "translateY(0)";
+      }
+    });
   }
 
   // Public API
