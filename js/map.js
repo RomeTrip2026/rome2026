@@ -46,7 +46,7 @@ const MapModule = (() => {
           el.classList.add("visited");
         }
 
-        const marker = new mapboxgl.Marker({ element: el })
+        const marker = new mapboxgl.Marker({ element: el, anchor: "center" })
           .setLngLat([place.lng, place.lat])
           .addTo(map);
 
