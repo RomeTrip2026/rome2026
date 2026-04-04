@@ -1,0 +1,396 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --panel-bg: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --visited-color: #9E9E9E;
+  --route-color: #2979FF;
+  --shadow: 0 -2px 16px rgba(0,0,0,0.15);
+  --radius: 16px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Map ── */
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+/* ── Map buttons ── */
+.map-btn {
+  position: absolute;
+  right: 16px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 5;
+  color: #333;
+  transition: background 0.15s;
+}
+
+.map-btn:active {
+  background: #eee;
+}
+
+#geolocate-btn {
+  bottom: 148px;
+}
+
+/* ── FAB ── */
+.fab {
+  position: absolute;
+  right: 16px;
+  bottom: calc(88px + var(--safe-bottom));
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 20;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.fab:active {
+  transform: scale(0.92);
+}
+
+.fab.open {
+  background: #444;
+}
+
+/* ── Route banner ── */
+.route-banner {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  background: var(--route-color);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 15;
+  box-shadow: 0 4px 12px rgba(41,121,255,0.35);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.route-banner.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
+
+.route-banner button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 0 0 12px;
+  line-height: 1;
+}
+
+/* ── Panel (bottom sheet) ── */
+.panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--panel-bg);
+  border-radius: var(--radius) var(--radius) 0 0;
+  box-shadow: var(--shadow);
+  z-index: 10;
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--safe-bottom);
+}
+
+.panel.open {
+  transform: translateY(0);
+}
+
+.panel-handle {
+  width: 36px;
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+  margin: 10px auto 6px;
+  flex-shrink: 0;
+}
+
+/* ── Itinerary list ── */
+.itinerary-list {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 16px 16px;
+  flex: 1;
+}
+
+.day-group {
+  margin-bottom: 16px;
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0 6px;
+  font-weight: 700;
+  font-size: 15px;
+  position: sticky;
+  top: 0;
+  background: var(--panel-bg);
+  z-index: 2;
+}
+
+.day-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.place-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.place-item:last-child {
+  border-bottom: none;
+}
+
+.place-check {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.place-check:checked {
+  background: var(--visited-color);
+  border-color: var(--visited-color);
+}
+
+.place-check:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.place-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.place-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.place-time {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.place-item.visited .place-name {
+  text-decoration: line-through;
+  color: var(--visited-color);
+}
+
+.place-item.visited .place-time {
+  color: #bbb;
+}
+
+.route-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--route-color);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.route-btn:active {
+  background: #e8f0fe;
+}
+
+.route-btn svg {
+  display: block;
+}
+
+/* ── Custom marker ── */
+.custom-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: opacity 0.3s, filter 0.3s;
+  position: relative;
+}
+
+.custom-marker.visited {
+  background-color: var(--visited-color) !important;
+  opacity: 0.55;
+}
+
+.custom-marker .marker-label {
+  display: none;
+}
+
+/* ── Popup ── */
+.mapboxgl-popup-content {
+  border-radius: 12px !important;
+  padding: 14px !important;
+  font-family: inherit;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+  max-width: 240px;
+}
+
+.popup-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.popup-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.popup-time {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.popup-btn {
+  flex: 1;
+  padding: 7px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.popup-btn:active {
+  opacity: 0.7;
+}
+
+.popup-btn-visited {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.popup-btn-visited.checked {
+  background: var(--visited-color);
+  color: #fff;
+}
+
+.popup-btn-route {
+  background: var(--route-color);
+  color: #fff;
+}
+
+/* ── Desktop ── */
+@media (min-width: 768px) {
+  .panel {
+    left: 16px;
+    right: auto;
+    bottom: 16px;
+    top: 16px;
+    width: 360px;
+    max-height: none;
+    border-radius: var(--radius);
+    transform: translateX(-400px);
+  }
+
+  .panel.open {
+    transform: translateX(0);
+  }
+
+  .fab {
+    left: 16px;
+    right: auto;
+    bottom: 24px;
+  }
+
+  .fab.open {
+    left: 392px;
+  }
+
+  #geolocate-btn {
+    bottom: 24px;
+    right: 16px;
+  }
+}

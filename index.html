@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Roma 2026</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Route info banner -->
+  <div id="route-banner" class="route-banner hidden">
+    <span id="route-info"></span>
+    <button id="route-close" aria-label="Cerrar ruta">&times;</button>
+  </div>
+
+  <!-- Geolocate button -->
+  <button id="geolocate-btn" class="map-btn" aria-label="Mi ubicación">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+    </svg>
+  </button>
+
+  <!-- FAB button -->
+  <button id="fab-btn" class="fab" aria-label="Itinerario">
+    <svg id="fab-icon-list" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <svg id="fab-icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+
+  <!-- Bottom sheet panel -->
+  <div id="panel" class="panel">
+    <div class="panel-handle"></div>
+    <div id="itinerary-list" class="itinerary-list"></div>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/itinerary.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
