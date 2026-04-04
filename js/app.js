@@ -24,7 +24,7 @@ const App = (() => {
       visitedSet.add(placeId);
     }
     saveVisited();
-    MapModule.updateMarkerVisited(placeId, visitedSet.has(placeId));
+    MapModule.rebuildSource(visitedSet);
     MapModule.closePopup();
     Itinerary.render(TRIP_DATA.days, visitedSet);
   }

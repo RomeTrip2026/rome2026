@@ -1,6 +1,6 @@
 const MapModule = (() => {
   let map;
-  let markers = {};
+  let placesIndex = {}; // id -> { place, color }
   let currentPopup = null;
   let routeLayerAdded = false;
 
@@ -17,7 +17,7 @@ const MapModule = (() => {
     map.addControl(new mapboxgl.AttributionControl({ compact: true }));
 
     map.on("load", () => {
-      // Add empty route source
+      // Route source
       map.addSource("route", {
         type: "geojson",
         data: { type: "Feature", geometry: { type: "LineString", coordinates: [] } },
@@ -36,34 +36,81 @@ const MapModule = (() => {
   }
 
   function addMarkers(days, visitedSet) {
+    const features = [];
+
     days.forEach((day) => {
       day.places.forEach((place) => {
-        const el = document.createElement("div");
-        el.className = "custom-marker";
-        el.style.backgroundColor = day.color;
-
-        if (visitedSet.has(place.id)) {
-          el.classList.add("visited");
-        }
-
-        const marker = new mapboxgl.Marker({ element: el, anchor: "center" })
-          .setLngLat([place.lng, place.lat])
-          .addTo(map);
-
-        el.addEventListener("click", (e) => {
-          e.stopPropagation();
-          showPopup(place, day.color, visitedSet);
+        placesIndex[place.id] = { place, color: day.color };
+        const visited = visitedSet.has(place.id);
+        features.push({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [place.lng, place.lat] },
+          properties: {
+            id: place.id,
+            name: place.name,
+            description: place.description,
+            time: place.time,
+            color: visited ? "#9E9E9E" : day.color,
+            opacity: visited ? 0.55 : 1,
+          },
         });
+      });
+    });
 
-        markers[place.id] = { marker, el, color: day.color };
+    map.on("load", () => {
+      map.addSource("places", {
+        type: "geojson",
+        data: { type: "FeatureCollection", features },
+      });
+
+      // White border circle
+      map.addLayer({
+        id: "places-border",
+        type: "circle",
+        source: "places",
+        paint: {
+          "circle-radius": 14,
+          "circle-color": "#ffffff",
+          "circle-opacity": ["get", "opacity"],
+        },
+      });
+
+      // Colored inner circle
+      map.addLayer({
+        id: "places-circle",
+        type: "circle",
+        source: "places",
+        paint: {
+          "circle-radius": 11,
+          "circle-color": ["get", "color"],
+          "circle-opacity": ["get", "opacity"],
+        },
+      });
+
+      // Click handler
+      map.on("click", "places-circle", (e) => {
+        const props = e.features[0].properties;
+        showPopup(props, visitedSet);
+      });
+
+      // Pointer cursor
+      map.on("mouseenter", "places-circle", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", "places-circle", () => {
+        map.getCanvas().style.cursor = "";
       });
     });
   }
 
-  function showPopup(place, color, visitedSet) {
+  function showPopup(props, visitedSet) {
     if (currentPopup) currentPopup.remove();
 
+    const info = placesIndex[props.id];
+    if (!info) return;
+    const place = info.place;
     const isVisited = visitedSet.has(place.id);
+
     const html = `
       <div class="popup-title">${place.name}</div>
       <div class="popup-desc">${place.description}</div>
@@ -80,21 +127,61 @@ const MapModule = (() => {
       </div>
     `;
 
-    currentPopup = new mapboxgl.Popup({ offset: 18, closeButton: true })
+    currentPopup = new mapboxgl.Popup({ offset: 14, closeButton: true })
       .setLngLat([place.lng, place.lat])
       .setHTML(html)
       .addTo(map);
   }
 
   function updateMarkerVisited(placeId, visited) {
-    const m = markers[placeId];
-    if (!m) return;
-    if (visited) {
-      m.el.classList.add("visited");
-    } else {
-      m.el.classList.remove("visited");
-      m.el.style.backgroundColor = m.color;
-    }
+    const source = map.getSource("places");
+    if (!source) return;
+
+    const data = source._data || source.serialize().data;
+    if (!data || !data.features) return;
+
+    const info = placesIndex[placeId];
+    if (!info) return;
+
+    data.features = data.features.map((f) => {
+      if (f.properties.id === placeId) {
+        return {
+          ...f,
+          properties: {
+            ...f.properties,
+            color: visited ? "#9E9E9E" : info.color,
+            opacity: visited ? 0.55 : 1,
+          },
+        };
+      }
+      return f;
+    });
+
+    source.setData(data);
+  }
+
+  function rebuildSource(visitedSet) {
+    const source = map.getSource("places");
+    if (!source) return;
+
+    const features = [];
+    Object.values(placesIndex).forEach(({ place, color }) => {
+      const visited = visitedSet.has(place.id);
+      features.push({
+        type: "Feature",
+        geometry: { type: "Point", coordinates: [place.lng, place.lat] },
+        properties: {
+          id: place.id,
+          name: place.name,
+          description: place.description,
+          time: place.time,
+          color: visited ? "#9E9E9E" : color,
+          opacity: visited ? 0.55 : 1,
+        },
+      });
+    });
+
+    source.setData({ type: "FeatureCollection", features });
   }
 
   function closePopup() {
@@ -111,7 +198,6 @@ const MapModule = (() => {
       geometry: { type: "LineString", coordinates },
     });
 
-    // Fit map to route bounds
     const bounds = coordinates.reduce(
       (b, coord) => b.extend(coord),
       new mapboxgl.LngLatBounds(coordinates[0], coordinates[0])
@@ -158,5 +244,5 @@ const MapModule = (() => {
     };
   }
 
-  return { init, addMarkers, updateMarkerVisited, closePopup, drawRoute, clearRoute, flyTo, geolocate, fetchRoute };
+  return { init, addMarkers, updateMarkerVisited, rebuildSource, closePopup, drawRoute, clearRoute, flyTo, geolocate, fetchRoute };
 })();
