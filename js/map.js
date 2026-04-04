@@ -1,17 +1,44 @@
 const MapModule = (() => {
   let map;
   let placesIndex = {}; // id -> { place, color, dayIndex }
-  let markers = []; // HTML markers
   let currentPopup = null;
   let routeLayerAdded = false;
+  let visitedSetRef = new Set();
 
-  const MARKER_ICONS = {
-    landmark: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>',
-    comida: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',
-    cafe: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>',
-    helado: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22L8 12h8z"/><path d="M12 12a5 5 0 0 1-5-5 5 5 0 0 1 10 0 5 5 0 0 1-5 5z"/><path d="M7.5 7a2.5 2.5 0 0 1 5 0"/><path d="M11.5 7a2.5 2.5 0 0 1 5 0"/></svg>',
-    tragos: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M19 3l-7 8-7-8z"/></svg>',
+  // SVG paths for each category icon (white stroke on transparent)
+  const ICON_SVGS = {
+    landmark: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>`,
+    comida: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
+    cafe: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>`,
+    helado: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22L8 12h8z"/><path d="M12 12a5 5 0 0 1-5-5 5 5 0 0 1 10 0 5 5 0 0 1-5 5z"/><path d="M7.5 7a2.5 2.5 0 0 1 5 0"/><path d="M11.5 7a2.5 2.5 0 0 1 5 0"/></svg>`,
+    tragos: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M19 3l-7 8-7-8z"/></svg>`,
   };
+
+  function loadCategoryIcons() {
+    const size = 24;
+    const ratio = window.devicePixelRatio || 1;
+    const promises = Object.entries(ICON_SVGS).map(([category, svg]) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        const blob = new Blob([svg], { type: "image/svg+xml" });
+        const url = URL.createObjectURL(blob);
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = size * ratio;
+          canvas.height = size * ratio;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, size * ratio, size * ratio);
+          URL.revokeObjectURL(url);
+          map.addImage(`icon-${category}`, ctx.getImageData(0, 0, size * ratio, size * ratio), {
+            pixelRatio: ratio,
+          });
+          resolve();
+        };
+        img.src = url;
+      });
+    });
+    return Promise.all(promises);
+  }
 
   function init(token) {
     mapboxgl.accessToken = token;
@@ -44,47 +71,98 @@ const MapModule = (() => {
   }
 
   function addMarkers(days, visitedSet) {
+    visitedSetRef = visitedSet;
+    const features = [];
+
     days.forEach((day, dayIdx) => {
       day.places.forEach((place) => {
         placesIndex[place.id] = { place, color: day.color, dayIndex: dayIdx };
+        const visited = visitedSet.has(place.id);
+        features.push(makeFeature(place, day.color, dayIdx, visited, false));
       });
     });
 
-    map.on("load", () => {
-      buildMarkers(visitedSet, null);
+    map.on("load", async () => {
+      await loadCategoryIcons();
+
+      map.addSource("places", {
+        type: "geojson",
+        data: { type: "FeatureCollection", features },
+      });
+
+      // White border circle
+      map.addLayer({
+        id: "places-border",
+        type: "circle",
+        source: "places",
+        paint: {
+          "circle-radius": 16,
+          "circle-color": "#ffffff",
+          "circle-opacity": ["get", "opacity"],
+        },
+      });
+
+      // Colored circle
+      map.addLayer({
+        id: "places-circle",
+        type: "circle",
+        source: "places",
+        paint: {
+          "circle-radius": 13,
+          "circle-color": ["get", "color"],
+          "circle-opacity": ["get", "opacity"],
+        },
+      });
+
+      // Category icon on top
+      map.addLayer({
+        id: "places-icon",
+        type: "symbol",
+        source: "places",
+        layout: {
+          "icon-image": ["get", "icon"],
+          "icon-size": 0.6,
+          "icon-allow-overlap": true,
+          "icon-ignore-placement": true,
+        },
+        paint: {
+          "icon-opacity": ["get", "opacity"],
+        },
+      });
+
+      map.on("click", "places-circle", (e) => {
+        const props = e.features[0].properties;
+        showPopup(props, visitedSetRef);
+      });
+      map.on("click", "places-icon", (e) => {
+        const props = e.features[0].properties;
+        showPopup(props, visitedSetRef);
+      });
+
+      map.on("mouseenter", "places-circle", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", "places-circle", () => {
+        map.getCanvas().style.cursor = "";
+      });
     });
   }
 
-  function buildMarkers(visitedSet, activeDayIndex) {
-    // Remove existing markers
-    markers.forEach((m) => m.remove());
-    markers = [];
-
-    Object.values(placesIndex).forEach(({ place, color, dayIndex }) => {
-      const visited = visitedSet.has(place.id);
-      const dimmed = activeDayIndex !== null && activeDayIndex !== undefined && dayIndex !== activeDayIndex;
-
-      const markerColor = (dimmed || visited) ? "#9E9E9E" : color;
-      const opacity = dimmed ? 0.2 : visited ? 0.55 : 1;
-      const icon = MARKER_ICONS[place.category] || "";
-
-      const el = document.createElement("div");
-      el.className = "map-marker";
-      el.style.background = markerColor;
-      el.style.opacity = opacity;
-      el.innerHTML = icon;
-
-      el.addEventListener("click", (e) => {
-        e.stopPropagation();
-        showPopup({ id: place.id }, visitedSet);
-      });
-
-      const marker = new mapboxgl.Marker({ element: el, anchor: "center" })
-        .setLngLat([place.lng, place.lat])
-        .addTo(map);
-
-      markers.push(marker);
-    });
+  function makeFeature(place, dayColor, dayIndex, visited, dimmed) {
+    return {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [place.lng, place.lat] },
+      properties: {
+        id: place.id,
+        name: place.name,
+        description: place.description,
+        time: place.time,
+        dayIndex,
+        color: (dimmed || visited) ? "#9E9E9E" : dayColor,
+        opacity: dimmed ? 0.2 : visited ? 0.55 : 1,
+        icon: `icon-${place.category}`,
+      },
+    };
   }
 
   function showPopup(props, visitedSet) {
@@ -115,14 +193,25 @@ const MapModule = (() => {
       </div>
     `;
 
-    currentPopup = new mapboxgl.Popup({ offset: 14, closeButton: true })
+    currentPopup = new mapboxgl.Popup({ offset: 16, closeButton: true })
       .setLngLat([place.lng, place.lat])
       .setHTML(html)
       .addTo(map);
   }
 
   function rebuildSource(visitedSet, activeDayIndex) {
-    buildMarkers(visitedSet, activeDayIndex);
+    visitedSetRef = visitedSet;
+    const source = map.getSource("places");
+    if (!source) return;
+
+    const features = [];
+    Object.values(placesIndex).forEach(({ place, color, dayIndex }) => {
+      const visited = visitedSet.has(place.id);
+      const dimmed = activeDayIndex !== null && activeDayIndex !== undefined && dayIndex !== activeDayIndex;
+      features.push(makeFeature(place, color, dayIndex, visited, dimmed));
+    });
+
+    source.setData({ type: "FeatureCollection", features });
   }
 
   function closePopup() {
