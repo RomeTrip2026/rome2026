@@ -344,23 +344,22 @@ html, body {
   display: block;
 }
 
-/* ── Custom marker ── */
-.custom-marker {
+/* ── Map markers ── */
+.map-marker {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s;
 }
 
-.custom-marker.visited {
-  background-color: var(--visited-color) !important;
-  opacity: 0.55;
-}
-
-.custom-marker .marker-label {
-  display: none;
+.map-marker:active {
+  transform: scale(0.9);
 }
 
 /* ── Popup ── */
