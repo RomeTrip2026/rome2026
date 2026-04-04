@@ -417,6 +417,114 @@ html, body {
   color: #fff;
 }
 
+/* ── Info button ── */
+.info-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  color: #999;
+  flex-shrink: 0;
+  transition: color 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-btn:active {
+  background: #f0f0f0;
+  color: #555;
+}
+
+/* ── Info modal ── */
+.info-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: opacity 0.25s;
+}
+
+.info-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.info-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.info-modal-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 540px;
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 24px 20px calc(20px + var(--safe-bottom));
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.info-modal.hidden .info-modal-card {
+  transform: translateY(100%);
+}
+
+#info-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: #f0f0f0;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+#info-modal-close:active {
+  background: #ddd;
+}
+
+#info-modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  padding-right: 36px;
+}
+
+#info-modal-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+#info-modal-body p {
+  margin-bottom: 10px;
+}
+
+#info-modal-body h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 16px 0 8px;
+  color: var(--text-primary);
+}
+
 /* ── Desktop ── */
 @media (min-width: 768px) {
   .panel {

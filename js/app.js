@@ -82,6 +82,10 @@ const App = (() => {
 
     // Close route
     document.getElementById("route-close").addEventListener("click", clearRoute);
+
+    // Info modal close
+    document.getElementById("info-modal-close").addEventListener("click", closeInfo);
+    document.querySelector(".info-modal-overlay").addEventListener("click", closeInfo);
   }
 
   function filterDay(dayIndex) {
@@ -89,8 +93,20 @@ const App = (() => {
     Itinerary.render(TRIP_DATA.days, visitedSet);
   }
 
+  function showInfo(placeId) {
+    const info = PLACE_INFO[placeId];
+    if (!info) return;
+    document.getElementById("info-modal-title").textContent = info.title;
+    document.getElementById("info-modal-body").innerHTML = info.html;
+    document.getElementById("info-modal").classList.remove("hidden");
+  }
+
+  function closeInfo() {
+    document.getElementById("info-modal").classList.add("hidden");
+  }
+
   // Public API
-  return { init, toggleVisited, requestRoute, filterDay };
+  return { init, toggleVisited, requestRoute, filterDay, showInfo, closeInfo };
 })();
 
 document.addEventListener("DOMContentLoaded", App.init);

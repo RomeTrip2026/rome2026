@@ -68,6 +68,13 @@ const Itinerary = (() => {
           <input type="checkbox" class="place-check" data-id="${place.id}"
                  ${visited ? "checked" : ""} style="border-color:${visited ? "" : day.color}">
           <span class="place-icon">${CATEGORY_ICONS[place.category] || ""}</span>
+          <button class="info-btn" data-place-id="${place.id}" aria-label="Info ${place.name}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+          </button>
           <div class="place-info">
             <div class="place-name">${place.name}</div>
             <div class="place-time">${place.time}</div>
@@ -89,6 +96,12 @@ const Itinerary = (() => {
     list.querySelectorAll(".place-check").forEach((cb) => {
       cb.addEventListener("change", (e) => {
         App.toggleVisited(e.target.dataset.id);
+      });
+    });
+
+    list.querySelectorAll(".info-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        App.showInfo(btn.dataset.placeId);
       });
     });
 
