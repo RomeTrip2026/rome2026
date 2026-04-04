@@ -1,8 +1,17 @@
 const Itinerary = (() => {
   let panelOpen = false;
   let activeDay = null; // null = all days
+  let activeCategory = null; // null = all categories
   const panelEl = () => document.getElementById("panel");
   const fabEl = () => document.getElementById("fab-btn");
+
+  const CATEGORY_LABELS = {
+    landmark: "Lugares",
+    comida: "Comida",
+    cafe: "Café",
+    helado: "Helado",
+    tragos: "Tragos",
+  };
 
   const CATEGORY_ICONS = {
     landmark: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>',
@@ -42,6 +51,32 @@ const Itinerary = (() => {
 
     list.appendChild(tabs);
 
+    // Category filter tabs
+    const catTabs = document.createElement("div");
+    catTabs.className = "category-tabs";
+
+    const allCatTab = document.createElement("button");
+    allCatTab.className = `cat-tab${activeCategory === null ? " active" : ""}`;
+    allCatTab.textContent = "Todo";
+    allCatTab.addEventListener("click", () => {
+      activeCategory = null;
+      App.filterCategory(null);
+    });
+    catTabs.appendChild(allCatTab);
+
+    Object.entries(CATEGORY_LABELS).forEach(([key, label]) => {
+      const tab = document.createElement("button");
+      tab.className = `cat-tab${activeCategory === key ? " active" : ""}`;
+      tab.innerHTML = `${CATEGORY_ICONS[key]}${label}`;
+      tab.addEventListener("click", () => {
+        activeCategory = activeCategory === key ? null : key;
+        App.filterCategory(activeCategory);
+      });
+      catTabs.appendChild(tab);
+    });
+
+    list.appendChild(catTabs);
+
     // Render days
     const daysToShow = activeDay !== null ? [{ day: days[activeDay], idx: activeDay }] : days.map((day, idx) => ({ day, idx }));
 
@@ -54,7 +89,13 @@ const Itinerary = (() => {
       header.innerHTML = `<span class="day-dot" style="background:${day.color}"></span>${day.label}`;
       group.appendChild(header);
 
-      const sorted = [...day.places].sort((a, b) => {
+      const filtered = activeCategory
+        ? day.places.filter((p) => p.category === activeCategory)
+        : day.places;
+
+      if (filtered.length === 0) return;
+
+      const sorted = [...filtered].sort((a, b) => {
         const aV = visitedSet.has(a.id) ? 1 : 0;
         const bV = visitedSet.has(b.id) ? 1 : 0;
         return aV - bV;
@@ -117,6 +158,10 @@ const Itinerary = (() => {
     return activeDay;
   }
 
+  function getActiveCategory() {
+    return activeCategory;
+  }
+
   function toggle() {
     panelOpen = !panelOpen;
     panelEl().classList.toggle("open", panelOpen);
@@ -166,5 +211,5 @@ const Itinerary = (() => {
     });
   }
 
-  return { render, toggle, isOpen, getActiveDay, setupSwipe };
+  return { render, toggle, isOpen, getActiveDay, getActiveCategory, setupSwipe };
 })();

@@ -221,6 +221,52 @@ html, body {
   flex-shrink: 0;
 }
 
+/* ── Category filter tabs ── */
+.category-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 0 0 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  flex-shrink: 0;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 16px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.cat-tab svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cat-tab.active {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: #fff;
+}
+
+.cat-tab.active svg {
+  stroke: #fff;
+}
+
 .day-group {
   margin-bottom: 16px;
 }

@@ -199,7 +199,7 @@ const MapModule = (() => {
       .addTo(map);
   }
 
-  function rebuildSource(visitedSet, activeDayIndex) {
+  function rebuildSource(visitedSet, activeDayIndex, activeCategory) {
     visitedSetRef = visitedSet;
     const source = map.getSource("places");
     if (!source) return;
@@ -207,7 +207,9 @@ const MapModule = (() => {
     const features = [];
     Object.values(placesIndex).forEach(({ place, color, dayIndex }) => {
       const visited = visitedSet.has(place.id);
-      const dimmed = activeDayIndex !== null && activeDayIndex !== undefined && dayIndex !== activeDayIndex;
+      const dimmedDay = activeDayIndex !== null && activeDayIndex !== undefined && dayIndex !== activeDayIndex;
+      const dimmedCat = activeCategory !== null && activeCategory !== undefined && place.category !== activeCategory;
+      const dimmed = dimmedDay || dimmedCat;
       features.push(makeFeature(place, color, dayIndex, visited, dimmed));
     });
 

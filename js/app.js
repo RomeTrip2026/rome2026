@@ -24,7 +24,7 @@ const App = (() => {
       visitedSet.add(placeId);
     }
     saveVisited();
-    MapModule.rebuildSource(visitedSet, Itinerary.getActiveDay());
+    MapModule.rebuildSource(visitedSet, Itinerary.getActiveDay(), Itinerary.getActiveCategory());
     MapModule.closePopup();
     Itinerary.render(TRIP_DATA.days, visitedSet);
   }
@@ -93,7 +93,12 @@ const App = (() => {
   }
 
   function filterDay(dayIndex) {
-    MapModule.rebuildSource(visitedSet, dayIndex);
+    MapModule.rebuildSource(visitedSet, dayIndex, Itinerary.getActiveCategory());
+    Itinerary.render(TRIP_DATA.days, visitedSet);
+  }
+
+  function filterCategory(category) {
+    MapModule.rebuildSource(visitedSet, Itinerary.getActiveDay(), category);
     Itinerary.render(TRIP_DATA.days, visitedSet);
   }
 
@@ -157,7 +162,7 @@ const App = (() => {
   }
 
   // Public API
-  return { init, toggleVisited, requestRoute, filterDay, showInfo, closeInfo };
+  return { init, toggleVisited, requestRoute, filterDay, filterCategory, showInfo, closeInfo };
 })();
 
 document.addEventListener("DOMContentLoaded", App.init);
