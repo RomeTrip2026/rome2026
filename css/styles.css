@@ -152,15 +152,21 @@ html, body {
 }
 
 .panel-handle {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: grab;
+}
+
+.panel-handle::after {
+  content: "";
   width: 36px;
   height: 4px;
   background: #ccc;
   border-radius: 2px;
-  margin: 0 auto;
-  padding: 14px 0;
-  background-clip: content-box;
-  flex-shrink: 0;
-  cursor: grab;
 }
 
 /* ── Itinerary list ── */
