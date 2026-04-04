@@ -1,5 +1,5 @@
 // ─── Put your Mapbox token here ───
-const MAPBOX_TOKEN = "YOUR_MAPBOX_TOKEN_HERE";
+const MAPBOX_TOKEN = "pk.eyJ1IjoiYWdhcmNpYWUiLCJhIjoiY2phdHN2amQ3MW5hcTJ4cGhzd2NlY3Z1eSJ9.d4rzmhRoRZrcPrgu0b2s4Q";
 // ───────────────────────────────────
 
 const App = (() => {
