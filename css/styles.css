@@ -235,10 +235,16 @@ html, body {
 }
 
 .place-icon {
-  font-size: 18px;
   flex-shrink: 0;
   width: 24px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.place-item.visited .place-icon {
+  color: #bbb;
 }
 
 .place-info {
