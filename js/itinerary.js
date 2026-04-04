@@ -134,33 +134,33 @@ const Itinerary = (() => {
 
   function setupSwipe() {
     const panel = panelEl();
-    const list = document.getElementById("itinerary-list");
     let startY = 0;
     let currentY = 0;
     let dragging = false;
 
     panel.addEventListener("touchstart", (e) => {
+      if (!panelOpen) return;
       startY = e.touches[0].clientY;
       currentY = startY;
       dragging = false;
     }, { passive: true });
 
     panel.addEventListener("touchmove", (e) => {
+      if (!panelOpen) return;
       currentY = e.touches[0].clientY;
       const dy = currentY - startY;
+      const list = document.getElementById("itinerary-list");
 
-      if (!dragging && dy > 8 && list.scrollTop <= 0) {
+      if (!dragging && dy > 10 && list.scrollTop < 1) {
         dragging = true;
         startY = currentY;
         panel.style.transition = "none";
       }
 
       if (dragging) {
-        const offset = currentY - startY;
-        if (offset > 0) {
-          e.preventDefault();
-          panel.style.transform = `translateY(${offset}px)`;
-        }
+        const offset = Math.max(0, currentY - startY);
+        e.preventDefault();
+        panel.style.transform = `translateY(${offset}px)`;
       }
     }, { passive: false });
 
@@ -168,12 +168,9 @@ const Itinerary = (() => {
       if (!dragging) return;
       dragging = false;
       panel.style.transition = "";
-      const dy = currentY - startY;
-      if (dy > 80) {
-        panel.style.transform = "";
+      panel.style.transform = "";
+      if (currentY - startY > 80) {
         toggle();
-      } else {
-        panel.style.transform = "translateY(0)";
       }
     });
   }
