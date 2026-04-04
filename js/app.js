@@ -117,32 +117,37 @@ const App = (() => {
     let dragging = false;
 
     card.addEventListener("touchstart", (e) => {
-      // Only start drag if scrolled to top or touching near the top handle area
-      if (card.scrollTop > 0) return;
       startY = e.touches[0].clientY;
       currentY = startY;
-      dragging = true;
-      card.style.transition = "none";
+      dragging = false;
     }, { passive: true });
 
     card.addEventListener("touchmove", (e) => {
-      if (!dragging) return;
       currentY = e.touches[0].clientY;
       const dy = currentY - startY;
-      if (dy > 0) {
-        card.style.transform = `translateY(${dy}px)`;
-      } else if (card.scrollTop <= 0) {
-        // Prevent pulling up beyond original position
-        card.style.transform = "translateY(0)";
+
+      // Start dragging down only when scrolled to top
+      if (!dragging && dy > 8 && card.scrollTop <= 0) {
+        dragging = true;
+        startY = currentY;
+        card.style.transition = "none";
       }
-    }, { passive: true });
+
+      if (dragging) {
+        const offset = currentY - startY;
+        if (offset > 0) {
+          e.preventDefault();
+          card.style.transform = `translateY(${offset}px)`;
+        }
+      }
+    }, { passive: false });
 
     card.addEventListener("touchend", () => {
       if (!dragging) return;
       dragging = false;
       card.style.transition = "";
       const dy = currentY - startY;
-      if (dy > 100) {
+      if (dy > 80) {
         closeInfo();
       } else {
         card.style.transform = "translateY(0)";
