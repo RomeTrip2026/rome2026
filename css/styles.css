@@ -234,6 +234,13 @@ html, body {
   transform: rotate(45deg);
 }
 
+.place-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
 .place-info {
   flex: 1;
   min-width: 0;

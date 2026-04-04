@@ -3,6 +3,14 @@ const Itinerary = (() => {
   const panelEl = () => document.getElementById("panel");
   const fabEl = () => document.getElementById("fab-btn");
 
+  const CATEGORY_ICONS = {
+    landmark: "🏛️",
+    comida: "🍝",
+    cafe: "☕",
+    helado: "🍦",
+    tragos: "🍸",
+  };
+
   function render(days, visitedSet) {
     const list = document.getElementById("itinerary-list");
     list.innerHTML = "";
@@ -31,6 +39,7 @@ const Itinerary = (() => {
         item.innerHTML = `
           <input type="checkbox" class="place-check" data-id="${place.id}"
                  ${visited ? "checked" : ""} style="border-color:${visited ? "" : day.color}">
+          <span class="place-icon">${CATEGORY_ICONS[place.category] || "📍"}</span>
           <div class="place-info">
             <div class="place-name">${place.name}</div>
             <div class="place-time">${place.time}</div>
