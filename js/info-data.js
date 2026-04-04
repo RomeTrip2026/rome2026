@@ -2,356 +2,356 @@ const PLACE_INFO = {
   "piazza-navona": {
     title: "Piazza Navona",
     html: `
-      <p>Built on the ruins of the <strong>Stadium of Domitian</strong> (1st century AD), Piazza Navona preserves the elongated shape of the ancient racetrack where athletic competitions were held. The stadium seated around 30,000 spectators and you can still see remnants of the original arches beneath the buildings on the north end.</p>
-      <p>The piazza's baroque transformation came in the 17th century under Pope Innocent X, who commissioned Bernini's masterpiece, the <strong>Fontana dei Quattro Fiumi</strong> (Fountain of the Four Rivers, 1651), representing the Nile, Ganges, Danube, and Río de la Plata — the great rivers of the four known continents.</p>
-      <p>Borromini's rival church, <strong>Sant'Agnese in Agone</strong>, faces the fountain — legend says the figures shield their eyes from its "ugly" facade, though in reality Bernini finished the fountain before the church was even started.</p>
+      <p>Construida sobre las ruinas del <strong>Estadio de Domiciano</strong> (siglo I d.C.), Piazza Navona conserva la forma alargada de la antigua pista de carreras donde se celebraban competiciones atléticas. El estadio tenía capacidad para unos 30.000 espectadores y aún se pueden ver restos de los arcos originales bajo los edificios del extremo norte.</p>
+      <p>Su transformación barroca llegó en el siglo XVII bajo el Papa Inocencio X, quien encargó la obra maestra de Bernini, la <strong>Fontana dei Quattro Fiumi</strong> (Fuente de los Cuatro Ríos, 1651), que representa el Nilo, el Ganges, el Danubio y el Río de la Plata — los grandes ríos de los cuatro continentes conocidos.</p>
+      <p>La iglesia rival de Borromini, <strong>Sant'Agnese in Agone</strong>, mira hacia la fuente. La leyenda dice que las figuras se tapan los ojos ante su "fea" fachada, aunque en realidad Bernini terminó la fuente antes de que la iglesia siquiera se empezara.</p>
       <h3>Tips</h3>
-      <p>Visit early morning (before 9 AM) to enjoy the piazza without crowds. The cafés around the square are tourist traps with inflated prices — grab your coffee a block away instead. Street artists set up in the afternoon, making it a lively spot for a stroll. Free to visit at all hours.</p>
+      <p>Visitarla temprano por la mañana (antes de las 9) para disfrutarla sin multitudes. Los cafés alrededor de la plaza son trampas para turistas con precios inflados — mejor tomar el café a una cuadra de distancia. Los artistas callejeros se instalan por la tarde. Acceso libre las 24 horas.</p>
     `
   },
   "pantheon": {
     title: "Pantheon",
     html: `
-      <p>The <strong>Pantheon</strong> is the best-preserved building from ancient Rome, originally built by Agrippa in 27 BC and completely rebuilt by Emperor Hadrian around 125 AD. Its unreinforced concrete dome remained the <strong>largest in the world for over 1,300 years</strong> — a record only surpassed in the 15th century by Brunelleschi's dome in Florence.</p>
-      <p>The oculus at the top (9 meters wide) is the building's only source of natural light and is open to the sky. When it rains, water falls through and drains via 22 nearly invisible holes in the slightly convex floor. The dome's interior height and diameter are identical (43.3 meters), meaning a perfect sphere could fit inside.</p>
-      <p>Since the 7th century, the Pantheon has served as a church (<strong>Santa Maria ad Martyres</strong>). It also contains the tombs of Renaissance masters Raphael and architect Baldassare Peruzzi, as well as two Italian kings.</p>
+      <p>El <strong>Panteón</strong> es el edificio mejor conservado de la antigua Roma, construido originalmente por Agripa en el 27 a.C. y reconstruido completamente por el emperador Adriano alrededor del 125 d.C. Su cúpula de hormigón sin refuerzo fue la <strong>más grande del mundo durante más de 1.300 años</strong> — un récord superado recién en el siglo XV por la cúpula de Brunelleschi en Florencia.</p>
+      <p>El óculo en la cima (9 metros de diámetro) es la única fuente de luz natural y está abierto al cielo. Cuando llueve, el agua entra y se drena por 22 agujeros casi invisibles en el suelo ligeramente convexo. La altura interior y el diámetro de la cúpula son idénticos (43,3 metros), lo que significa que una esfera perfecta cabría dentro.</p>
+      <p>Desde el siglo VII funciona como iglesia (<strong>Santa Maria ad Martyres</strong>). También contiene las tumbas del maestro renacentista Rafael y del arquitecto Baldassare Peruzzi, además de dos reyes italianos.</p>
       <h3>Tips</h3>
-      <p>Entry requires a <strong>reservation and a €5 ticket</strong> (introduced in 2023). Book online at the official site to skip the queue. Best visited mid-morning when the sun creates a dramatic beam through the oculus. Audio guides available for €5. Mass is held Saturday evenings and Sunday mornings — entry is free during services.</p>
+      <p>La entrada requiere <strong>reserva y un ticket de €5</strong> (desde 2023). Reservar online en el sitio oficial para saltarse la cola. Mejor visitarlo a media mañana cuando el sol crea un haz de luz espectacular a través del óculo. Audioguías disponibles por €5. Hay misa los sábados por la tarde y domingos por la mañana — la entrada es gratis durante los servicios.</p>
     `
   },
   "fontana-trevi": {
     title: "Fontana di Trevi",
     html: `
-      <p>Completed in 1762 by architect Nicola Salvi, the <strong>Fontana di Trevi</strong> stands 26 meters high and 49 meters wide, making it the largest baroque fountain in Rome. It's fed by the <strong>Acqua Vergine</strong>, one of ancient Rome's original aqueducts, built in 19 BC and still functioning today.</p>
-      <p>The central figure is <strong>Neptune</strong> (Oceanus), flanked by two tritons — one struggling with a wild sea horse, the other guiding a calm one, symbolizing the ocean's moods. The fountain was made globally famous by Fellini's 1960 film <em>La Dolce Vita</em>, in which Anita Ekberg wades into its waters.</p>
-      <p>Around <strong>€3,000 per day</strong> in coins are thrown into the fountain — roughly €1.5 million per year. The money is collected nightly and donated to Caritas, a Catholic charity that funds a supermarket for Rome's poor.</p>
+      <p>Terminada en 1762 por el arquitecto Nicola Salvi, la <strong>Fontana di Trevi</strong> mide 26 metros de alto y 49 de ancho, lo que la convierte en la fuente barroca más grande de Roma. Se alimenta del <strong>Acqua Vergine</strong>, uno de los acueductos originales de la Roma antigua, construido en el 19 a.C. y que sigue funcionando hoy.</p>
+      <p>La figura central es <strong>Neptuno</strong> (Océano), flanqueado por dos tritones — uno luchando con un caballo marino salvaje y otro guiando a uno tranquilo, simbolizando los humores del océano. La fuente se hizo mundialmente famosa por la película de Fellini <em>La Dolce Vita</em> (1960), donde Anita Ekberg se mete en sus aguas.</p>
+      <p>Se lanzan alrededor de <strong>€3.000 al día</strong> en monedas — unos €1,5 millones al año. El dinero se recoge cada noche y se dona a Cáritas, que financia un supermercado para los pobres de Roma.</p>
       <h3>Tips</h3>
-      <p>Extremely crowded from 10 AM to 10 PM. Visit at <strong>sunrise (6–7 AM)</strong> or very late at night for a magical, crowd-free experience. Watch for pickpockets — this is one of Rome's worst spots. Standing on the fountain or dipping your feet in the water carries a €450 fine. Throw a coin with your right hand over your left shoulder to "guarantee" a return to Rome.</p>
+      <p>Extremadamente llena de 10 AM a 10 PM. Visitarla al <strong>amanecer (6–7 AM)</strong> o muy tarde en la noche para una experiencia mágica sin gente. Cuidado con los carteristas — es uno de los peores puntos de Roma. Pararse en la fuente o meter los pies tiene una multa de €450. Tirar la moneda con la mano derecha sobre el hombro izquierdo para "garantizar" el regreso a Roma.</p>
     `
   },
   "roscioli": {
     title: "Roscioli",
     html: `
-      <p><strong>Roscioli</strong> is a legendary Roman institution that combines a restaurant, salumería (deli), and wine bar all in one. The Roscioli family has been in the food business since 1824, and this location on Via dei Giubbonari has become a pilgrimage site for food lovers worldwide.</p>
-      <p>Their <strong>cacio e pepe</strong> is widely considered among the best in Rome — a deceptively simple dish of pecorino romano, black pepper, and tonnarelli pasta that takes years to master. The wine cellar holds over 2,600 labels, and the deli counter features curated cheeses and cured meats from across Italy.</p>
+      <p><strong>Roscioli</strong> es una institución romana legendaria que combina restaurante, salumería (charcutería) y bar de vinos en uno. La familia Roscioli lleva en el negocio gastronómico desde 1824, y este local en Via dei Giubbonari se ha convertido en lugar de peregrinación para amantes de la comida de todo el mundo.</p>
+      <p>Su <strong>cacio e pepe</strong> está considerado entre los mejores de Roma — un plato engañosamente simple de pecorino romano, pimienta negra y pasta tonnarelli que lleva años dominar. La bodega tiene más de 2.600 etiquetas, y el mostrador de charcutería ofrece quesos y embutidos seleccionados de toda Italia.</p>
       <h3>Tips</h3>
-      <p><strong>Reservations are essential</strong> — book at least a week in advance, especially for dinner. Lunch is slightly easier to get into. The deli counter is walk-in and perfect for a quick porchetta sandwich or a plate of burrata. Budget €40–60 per person for a full meal with wine. Closed Sundays.</p>
+      <p><strong>Reservar es imprescindible</strong> — al menos una semana antes, especialmente para cenar. El almuerzo es un poco más fácil. El mostrador de charcutería es sin reserva y perfecto para un sándwich de porchetta o un plato de burrata. Presupuesto de €40–60 por persona con vino. Cerrado los domingos.</p>
     `
   },
   "antico-forno-roscioli": {
     title: "Antico Forno Roscioli",
     html: `
-      <p>Run by the same Roscioli family, <strong>Antico Forno Roscioli</strong> has been baking bread since 1824. This is not a restaurant — it's a proper <em>forno</em> (bakery) specializing in <strong>pizza al taglio</strong> (pizza by the slice) and traditional Roman breads.</p>
-      <p>Their <strong>pizza bianca</strong> — a simple flatbread with just olive oil and salt — is legendary. Crispy on the outside, airy inside, and served warm throughout the day. The supplì (fried rice balls) are also a must-try — classic Roman street food at its finest.</p>
+      <p>De la misma familia Roscioli, el <strong>Antico Forno Roscioli</strong> hornea pan desde 1824. No es un restaurante — es un auténtico <em>forno</em> (panadería) especializado en <strong>pizza al taglio</strong> (pizza al corte) y panes romanos tradicionales.</p>
+      <p>Su <strong>pizza bianca</strong> — un pan plano simple con solo aceite de oliva y sal — es legendaria. Crujiente por fuera, aireada por dentro, y servida caliente durante todo el día. Los supplì (bolas de arroz fritas) también son imperdibles — comida callejera romana clásica en su máxima expresión.</p>
       <h3>Tips</h3>
-      <p>Pizza is sold by weight, so point at what you want and they'll cut a piece. A generous slice costs €3–5. Peak lunch hour (12:30–1:30) has lines out the door — come at 11:30 or after 2 PM. Cash is accepted but cards work too. Eat standing at the counter or take it to go.</p>
+      <p>La pizza se vende por peso, solo señalar lo que quieras y cortan un trozo. Una porción generosa cuesta €3–5. La hora pico del almuerzo (12:30–1:30) tiene cola hasta la puerta — ir a las 11:30 o después de las 2 PM. Se aceptan tarjetas. Comer de pie en el mostrador o para llevar.</p>
     `
   },
   "vineria-il-chianti": {
     title: "Vineria Il Chianti",
     html: `
-      <p><strong>Vineria Il Chianti</strong> is a cozy wine bar and restaurant tucked in a side street near Piazza Navona, specializing in Tuscan cuisine. Despite being in the tourist center, it maintains solid quality and reasonable prices — a rarity in this area.</p>
-      <p>The menu features Tuscan staples: thick-cut bistecca, ribollita (bread soup), pappardelle al cinghiale (wild boar pasta), and a strong selection of Chianti and Brunello wines by the glass. The rustic interior with wooden beams and wine bottles lining the walls gives it genuine character.</p>
+      <p><strong>Vineria Il Chianti</strong> es un acogedor bar de vinos y restaurante en una calle lateral cerca de Piazza Navona, especializado en cocina toscana. A pesar de estar en pleno centro turístico, mantiene buena calidad y precios razonables — una rareza en esta zona.</p>
+      <p>El menú ofrece clásicos toscanos: bistecca gruesa, ribollita (sopa de pan), pappardelle al cinghiale (pasta con jabalí), y una buena selección de vinos Chianti y Brunello por copa. El interior rústico con vigas de madera y botellas de vino le dan carácter genuino.</p>
       <h3>Tips</h3>
-      <p>The outdoor tables on the cobblestone street are wonderful for people-watching. Go for an early dinner (7 PM) to grab a table without waiting. The house Chianti by the glass is good value. Budget €25–35 per person. Open daily, unlike many local spots that close on Sundays.</p>
+      <p>Las mesas al aire libre en la calle empedrada son geniales para observar gente. Ir a cenar temprano (7 PM) para conseguir mesa sin esperar. El Chianti de la casa por copa tiene buena relación calidad-precio. Presupuesto €25–35 por persona. Abierto todos los días.</p>
     `
   },
   "sant-eustachio": {
     title: "Sant'Eustachio il Caffè",
     html: `
-      <p>Open since <strong>1938</strong>, Sant'Eustachio il Caffè is a Roman institution, widely regarded as serving the best espresso in the city. The café sits in the shadow of the church of Sant'Eustachio, between the Pantheon and the Senate.</p>
-      <p>Their signature drink, the <strong>gran caffè</strong>, is made with a secret method — rumored to involve whipping the first drops of espresso with sugar to create a creamy foam that tops the drink. The baristas turn their backs while preparing it, fiercely guarding the technique. The result is an intensely sweet, velvety espresso unlike anything else in Rome.</p>
+      <p>Abierto desde <strong>1938</strong>, Sant'Eustachio il Caffè es una institución romana, ampliamente considerado como el mejor espresso de la ciudad. El café está a la sombra de la iglesia de Sant'Eustachio, entre el Panteón y el Senado.</p>
+      <p>Su bebida estrella, el <strong>gran caffè</strong>, se prepara con un método secreto — se rumorea que implica batir las primeras gotas de espresso con azúcar para crear una espuma cremosa que corona el café. Los baristas se dan la vuelta mientras lo preparan, guardando celosamente la técnica. El resultado es un espresso intensamente dulce y aterciopelado, único en Roma.</p>
       <h3>Tips</h3>
-      <p>Order at the bar for the standing price (€1.50–2) — sitting down at a table costs 2–3x more. If you want your coffee <strong>without sugar</strong>, you must explicitly say "amaro" or they will add sugar by default. The bottled coffee beans make an excellent souvenir. Open 8:30 AM to 1 AM daily.</p>
+      <p>Pedir en la barra al precio de pie (€1,50–2) — sentarse en una mesa cuesta 2–3 veces más. Si quieres el café <strong>sin azúcar</strong>, hay que decir explícitamente "amaro" o le pondrán azúcar por defecto. Los granos de café embotellados son un excelente souvenir. Abierto de 8:30 AM a 1 AM todos los días.</p>
     `
   },
   "tazza-doro": {
     title: "Tazza d'Oro",
     html: `
-      <p><strong>Tazza d'Oro</strong> (Golden Cup) has been roasting coffee just steps from the Pantheon since <strong>1946</strong>. It rivals Sant'Eustachio for the title of Rome's best café, with purists preferring its more traditional approach — no secret recipes, just excellent beans and skilled baristas.</p>
-      <p>In summer, their famous <strong>granita di caffè con panna</strong> (frozen coffee topped with whipped cream) is a must — a frozen coffee slush that's the perfect Roman antidote to the heat. The aroma of freshly roasted beans hits you from half a block away.</p>
+      <p><strong>Tazza d'Oro</strong> (Copa de Oro) tuesta café a pasos del Panteón desde <strong>1946</strong>. Rivaliza con Sant'Eustachio por el título del mejor café de Roma, con los puristas prefiriendo su enfoque más tradicional — sin recetas secretas, solo excelentes granos y baristas hábiles.</p>
+      <p>En verano, su famosa <strong>granita di caffè con panna</strong> (café helado con crema batida) es imperdible — un granizado de café que es el antídoto romano perfecto contra el calor. El aroma de los granos recién tostados te llega a media cuadra de distancia.</p>
       <h3>Tips</h3>
-      <p>Like most Italian cafés, stand at the bar for the best price — the espresso is about €1.20. Pay at the cash register first, then bring your receipt (scontrino) to the bar. The shop sells their coffee beans in beautiful gold packaging — great gifts. Open Mon–Sat from 7 AM, closed Sundays.</p>
+      <p>Como en la mayoría de los cafés italianos, pararse en la barra para el mejor precio — el espresso cuesta unos €1,20. Pagar primero en la caja, luego llevar el recibo (scontrino) a la barra. La tienda vende granos en un packaging dorado muy bonito — buenos regalos. Abierto lun–sáb desde las 7 AM, cerrado domingos.</p>
     `
   },
   "giolitti": {
     title: "Giolitti",
     html: `
-      <p>Founded in <strong>1900</strong>, Giolitti is one of Rome's most historic gelaterias. Located just off Via del Corso, it has served gelato to everyone from tourists to Italian presidents — the nearby parliament ensures a steady stream of politicians on their lunch breaks.</p>
-      <p>With over 60 flavors available, Giolitti is known for generous portions and classic Italian gelato style — rich, creamy, and intensely flavored. Their <strong>crema giolitti</strong> (a secret-recipe custard flavor), pistachio, and dark chocolate are standouts.</p>
+      <p>Fundada en <strong>1900</strong>, Giolitti es una de las heladerías más históricas de Roma. Ubicada cerca de Via del Corso, ha servido helado a todos, desde turistas hasta presidentes italianos — el parlamento cercano asegura un flujo constante de políticos en su hora de almuerzo.</p>
+      <p>Con más de 60 sabores disponibles, Giolitti es conocida por sus porciones generosas y el estilo clásico de gelato italiano — rico, cremoso e intensamente saborizado. Su <strong>crema giolitti</strong> (un sabor de crema con receta secreta), el pistacho y el chocolate negro son los destacados.</p>
       <h3>Tips</h3>
-      <p>The process: pay at the register first, choose your size (€3–5), then bring the receipt to the counter and choose flavors. You can pick 2–3 flavors even for a small cone. Skip the waiter-service tables unless you want to pay double. Ask for <strong>panna</strong> (whipped cream) on top — it's included free. Open daily until midnight.</p>
+      <p>El proceso: pagar primero en la caja, elegir el tamaño (€3–5), luego llevar el recibo al mostrador y elegir sabores. Se pueden pedir 2–3 sabores incluso en un cono pequeño. Evitar las mesas con servicio de camarero a menos que quieras pagar el doble. Pedir <strong>panna</strong> (crema batida) encima — es gratis. Abierto todos los días hasta medianoche.</p>
     `
   },
   "san-crispino": {
     title: "Il Gelato di San Crispino",
     html: `
-      <p><strong>Il Gelato di San Crispino</strong> takes gelato-making to an art form. Founded by the Alongi brothers, it uses only natural, seasonal ingredients — no artificial colors, flavors, or preservatives. The gelato is made fresh throughout the day in small batches.</p>
-      <p>Their signature flavor, <strong>crema di San Crispino</strong>, is a honey-infused custard that's become legendary. The pistachio uses nuts exclusively from Bronte, Sicily. Unlike most gelaterias, they serve only in cups — no cones, because they believe the wafer alters the flavor.</p>
+      <p><strong>Il Gelato di San Crispino</strong> eleva la heladería a forma de arte. Fundado por los hermanos Alongi, usa solo ingredientes naturales y de temporada — sin colorantes, saborizantes ni conservantes artificiales. El helado se hace fresco durante todo el día en lotes pequeños.</p>
+      <p>Su sabor estrella, la <strong>crema di San Crispino</strong>, es una crema con miel que se ha vuelto legendaria. El pistacho usa nueces exclusivamente de Bronte, Sicilia. A diferencia de la mayoría de heladerías, solo sirven en vaso — no conos, porque creen que la galleta altera el sabor.</p>
       <h3>Tips</h3>
-      <p>No cones — cups only, which is actually a sign of quality. Prices are slightly higher than average (€3–6) but the quality justifies it. The location near Trevi is the original; there's another near Piazza Navona. Ask the staff for recommendations — they're passionate and knowledgeable about flavor pairings.</p>
+      <p>Sin conos — solo vasos, lo cual es en realidad señal de calidad. Los precios son ligeramente más altos que el promedio (€3–6) pero la calidad lo justifica. El local cerca de Trevi es el original; hay otro cerca de Piazza Navona. Preguntar al personal por recomendaciones — son apasionados y conocedores de las combinaciones de sabores.</p>
     `
   },
   "bar-del-fico": {
     title: "Bar del Fico",
     html: `
-      <p><strong>Bar del Fico</strong> takes its name from the large fig tree (fico) that shades its outdoor seating area on the picturesque piazza. Located just behind Piazza Navona, it's a favorite gathering spot for both Romans and visitors, known for its relaxed bohemian atmosphere.</p>
-      <p>By day it functions as a café with excellent brunch, but it really comes alive during <strong>aperitivo hour</strong> (6–9 PM), when locals crowd the outdoor tables and the surrounding cobblestones for spritz and Negroni. The chess tables outside are a distinctive feature — regulars play well into the evening.</p>
+      <p><strong>Bar del Fico</strong> toma su nombre de la gran higuera (fico) que da sombra a su terraza en la pintoresca plaza. Ubicado justo detrás de Piazza Navona, es un punto de encuentro favorito tanto para romanos como para visitantes, conocido por su ambiente bohemio y relajado.</p>
+      <p>De día funciona como café con excelente brunch, pero cobra vida durante la <strong>hora del aperitivo</strong> (6–9 PM), cuando los locales llenan las mesas al aire libre y los adoquines circundantes con spritz y Negroni. Las mesas de ajedrez afuera son un rasgo distintivo — los habituales juegan hasta bien entrada la noche.</p>
       <h3>Tips</h3>
-      <p>Come for aperitivo around 6 PM to grab an outdoor table under the fig tree. A spritz runs €8–10 and often includes nibbles. Weekend brunch is excellent but busy — arrive before 11 AM. The Wi-Fi is reliable, making it a good spot for a morning work session. Open daily from early morning to late night.</p>
+      <p>Ir para el aperitivo alrededor de las 6 PM para conseguir una mesa bajo la higuera. Un spritz cuesta €8–10 y suele incluir algo para picar. El brunch del fin de semana es excelente pero concurrido — llegar antes de las 11 AM. Buen Wi-Fi. Abierto todos los días desde temprano hasta tarde.</p>
     `
   },
   "cul-de-sac": {
     title: "Cul de Sac",
     html: `
-      <p>Opened in <strong>1977</strong>, <strong>Cul de Sac</strong> is one of Rome's first wine bars and still one of its best. Tucked into Piazza di Pasquino (just off Piazza Navona), it boasts a wine list of over <strong>1,500 labels</strong> covering every Italian region and beyond.</p>
-      <p>Beyond wine, it serves excellent light meals — think cheese and charcuterie boards, pâtés, hearty soups, and salads. The narrow, bustling interior with floor-to-ceiling wine racks creates an atmosphere that hasn't changed much in nearly 50 years.</p>
+      <p>Abierto en <strong>1977</strong>, <strong>Cul de Sac</strong> es uno de los primeros bares de vinos de Roma y sigue siendo uno de los mejores. Ubicado en Piazza di Pasquino (junto a Piazza Navona), cuenta con una carta de más de <strong>1.500 etiquetas</strong> que cubren todas las regiones italianas y más allá.</p>
+      <p>Además de vino, sirve excelentes comidas ligeras — tablas de quesos y embutidos, patés, sopas contundentes y ensaladas. El interior estrecho y bullicioso con estanterías de vino del piso al techo crea un ambiente que apenas ha cambiado en casi 50 años.</p>
       <h3>Tips</h3>
-      <p>No reservations — first come, first served. Arrive before 7 PM for dinner or expect a wait. The staff are genuine wine experts — tell them what you like and your budget, and they'll find something perfect. House wine by the glass starts at €5, bottles from €15. Great for a pre-dinner aperitivo or a light meal.</p>
+      <p>Sin reservas — por orden de llegada. Llegar antes de las 7 PM para cenar o esperar cola. El personal son auténticos expertos en vinos — decirles lo que te gusta y tu presupuesto, y encontrarán algo perfecto. Vino de la casa por copa desde €5, botellas desde €15. Genial para un aperitivo o comida ligera.</p>
     `
   },
   "vatican-museums": {
-    title: "Vatican Museums",
+    title: "Museos Vaticanos",
     html: `
-      <p>The <strong>Vatican Museums</strong> house one of the largest and most important art collections in the world, accumulated by popes over centuries. The 54 galleries cover <strong>7 kilometers of exhibits</strong>, from ancient Egyptian mummies to Renaissance masterpieces and modern works by Dalí and Bacon.</p>
-      <p>The crown jewel is the <strong>Sistine Chapel</strong> (Cappella Sistina), painted by Michelangelo between 1508 and 1512. The ceiling's nine scenes from Genesis, culminating in the <em>Creation of Adam</em>, took four years of work on scaffolding. He returned 25 years later to paint <em>The Last Judgment</em> on the altar wall. The Raphael Rooms (Stanze di Raffaello) are another highlight, featuring the famous <em>School of Athens</em>.</p>
+      <p>Los <strong>Museos Vaticanos</strong> albergan una de las colecciones de arte más grandes e importantes del mundo, acumulada por los papas durante siglos. Las 54 galerías cubren <strong>7 kilómetros de exposiciones</strong>, desde momias egipcias hasta obras maestras del Renacimiento y arte moderno de Dalí y Bacon.</p>
+      <p>La joya de la corona es la <strong>Capilla Sixtina</strong>, pintada por Miguel Ángel entre 1508 y 1512. Las nueve escenas del Génesis en el techo, culminando con la <em>Creación de Adán</em>, le llevaron cuatro años de trabajo sobre andamios. Regresó 25 años después para pintar <em>El Juicio Final</em> en la pared del altar. Las Estancias de Rafael son otro punto destacado, con la famosa <em>Escuela de Atenas</em>.</p>
       <h3>Tips</h3>
-      <p><strong>Book tickets online in advance</strong> (€17 + €4 reservation) — the on-site queue can be 2–4 hours. Enter as close to 8:30 AM opening as possible and go <strong>directly to the Sistine Chapel</strong> via the shortcut through the Egyptian galleries, then backtrack. Photography is banned in the Sistine Chapel (but allowed everywhere else). Wear clothing that covers shoulders and knees. Allow 3–4 hours minimum. The spiral staircase at the exit is iconic — don't miss it.</p>
+      <p><strong>Comprar entradas online con antelación</strong> (€17 + €4 de reserva) — la cola presencial puede ser de 2–4 horas. Entrar lo más cerca posible de la apertura a las 8:30 AM e ir <strong>directo a la Capilla Sixtina</strong> por el atajo a través de las galerías egipcias, luego volver atrás. Prohibido fotografiar en la Capilla Sixtina (pero sí en el resto). Llevar ropa que cubra hombros y rodillas. Mínimo 3–4 horas. La escalera de caracol a la salida es icónica.</p>
     `
   },
   "st-peters-basilica": {
-    title: "St. Peter's Basilica",
+    title: "Basílica de San Pedro",
     html: `
-      <p><strong>St. Peter's Basilica</strong> is the world's largest church and the spiritual center of Catholicism, built over the tomb of Saint Peter, one of Jesus's apostles and the first pope. The current basilica was completed in 1626 after 120 years of construction, with contributions from Bramante, Raphael, Michelangelo, and Bernini.</p>
-      <p>Michelangelo designed the iconic <strong>dome</strong> (136m high), which dominates Rome's skyline. Inside, Bernini's bronze baldachin (canopy) over the papal altar stands 29 meters tall — made from bronze stripped from the Pantheon's portico. Michelangelo's <strong>Pietà</strong> (1499), carved when he was just 24, sits in the first chapel to the right — it's his only signed work (he carved his name across the Virgin's sash after hearing people attribute it to another sculptor).</p>
+      <p>La <strong>Basílica de San Pedro</strong> es la iglesia más grande del mundo y el centro espiritual del catolicismo, construida sobre la tumba de San Pedro, uno de los apóstoles de Jesús y el primer papa. La basílica actual se completó en 1626 tras 120 años de construcción, con contribuciones de Bramante, Rafael, Miguel Ángel y Bernini.</p>
+      <p>Miguel Ángel diseñó la icónica <strong>cúpula</strong> (136m de alto), que domina el horizonte de Roma. Dentro, el baldaquino de bronce de Bernini sobre el altar papal mide 29 metros — hecho con bronce arrancado del pórtico del Panteón. La <strong>Pietà</strong> de Miguel Ángel (1499), tallada cuando tenía solo 24 años, está en la primera capilla a la derecha — es su única obra firmada (grabó su nombre en la faja de la Virgen al oír que la atribuían a otro escultor).</p>
       <h3>Tips</h3>
-      <p>Entry to the basilica is <strong>free</strong> but the line can take 30–60 minutes. The <strong>dome climb</strong> costs €8 (stairs) or €10 (elevator + stairs) — the 320-step climb rewards with the best view in Rome. Dress code strictly enforced: covered shoulders and knees. Visit right after the Vatican Museums for efficiency, or arrive at 7 AM opening for shorter lines. Security screening is required.</p>
+      <p>La entrada a la basílica es <strong>gratis</strong> pero la cola puede durar 30–60 minutos. La <strong>subida a la cúpula</strong> cuesta €8 (escaleras) o €10 (ascensor + escaleras) — los 320 escalones recompensan con la mejor vista de Roma. Código de vestimenta estricto: hombros y rodillas cubiertos. Visitarla justo después de los Museos Vaticanos o llegar a la apertura a las 7 AM. Se requiere control de seguridad.</p>
     `
   },
   "osteria-dell-angelo": {
     title: "Osteria dell'Angelo",
     html: `
-      <p><strong>Osteria dell'Angelo</strong> is a beloved neighborhood trattoria in the Prati district, serving traditional Roman cuisine in a no-frills setting. Run by Angelo himself, it offers a <strong>fixed-price menu</strong> that includes an antipasto buffet, two pasta courses, a main, side dishes, and wine.</p>
-      <p>The menu rotates but always features Roman classics: amatriciana, carbonara, cacio e pepe, abbacchio (Roman-style lamb), and trippa alla romana. It's the kind of place where locals come for a hearty, affordable meal and leave feeling like they ate at nonna's house.</p>
+      <p><strong>Osteria dell'Angelo</strong> es una querida trattoria de barrio en el distrito de Prati, que sirve cocina romana tradicional en un ambiente sin pretensiones. Dirigida por el propio Angelo, ofrece un <strong>menú a precio fijo</strong> que incluye buffet de antipasti, dos platos de pasta, un segundo, guarniciones y vino.</p>
+      <p>El menú rota pero siempre incluye clásicos romanos: amatriciana, carbonara, cacio e pepe, abbacchio (cordero al estilo romano) y trippa alla romana. Es el tipo de lugar donde los locales van a comer abundante y barato, y salen sintiéndose como si hubieran comido en casa de la nonna.</p>
       <h3>Tips</h3>
-      <p><strong>Reservations are mandatory</strong> for dinner. The fixed menu (around €30–35 including wine) is extraordinary value. Lunch is à la carte and more relaxed. The restaurant is slightly hidden on Via Bettolo — look for the small sign. Cash preferred. Closed Sundays. Portions are enormous, so come hungry.</p>
+      <p><strong>Reservar es obligatorio</strong> para la cena. El menú fijo (unos €30–35 con vino) es un valor extraordinario. El almuerzo es a la carta y más relajado. El restaurante está algo escondido en Via Bettolo — buscar el cartel pequeño. Preferible efectivo. Cerrado domingos. Las porciones son enormes, ir con hambre.</p>
     `
   },
   "sicilia-in-bocca": {
     title: "Sicilia in Bocca",
     html: `
-      <p><strong>Sicilia in Bocca</strong> brings the flavors of Sicily to Rome's Prati neighborhood. The restaurant specializes in fresh seafood and Sicilian specialties — think arancini (fried rice balls), pasta alla Norma (with eggplant and ricotta salata), and fish couscous from Trapani.</p>
-      <p>The interior evokes a rustic Sicilian trattoria, and the menu changes based on what's fresh at the market. Seafood is the star, but their caponata and cannoli are also outstanding — proper Sicilian cannoli with ricotta that's piped to order, not pre-filled.</p>
+      <p><strong>Sicilia in Bocca</strong> trae los sabores de Sicilia al barrio Prati de Roma. El restaurante se especializa en mariscos frescos y especialidades sicilianas — arancini (bolas de arroz fritas), pasta alla Norma (con berenjena y ricotta salata) y cuscús de pescado de Trapani.</p>
+      <p>El interior evoca una trattoria siciliana rústica, y el menú cambia según lo que hay fresco en el mercado. El marisco es la estrella, pero la caponata y los cannoli también son sobresalientes — auténticos cannoli sicilianos con ricotta que se rellena al momento, no prefabricados.</p>
       <h3>Tips</h3>
-      <p>Book ahead for dinner — it's popular with both locals and visitors. Ask about the daily fish specials. The lunch menu offers better value. Try the frittura mista (mixed fried seafood) as a starter. Budget €30–40 per person with wine. Closed Mondays. The Prati location makes it convenient before or after a Vatican visit.</p>
+      <p>Reservar para la cena — es popular entre locales y visitantes. Preguntar por los especiales de pescado del día. El menú del almuerzo ofrece mejor valor. Probar la frittura mista (fritura mixta de mariscos) de entrada. Presupuesto €30–40 por persona con vino. Cerrado lunes. La ubicación en Prati lo hace conveniente antes o después del Vaticano.</p>
     `
   },
   "pergamino": {
     title: "Pergamino Caffè",
     html: `
-      <p><strong>Pergamino</strong> is a third-wave specialty coffee shop in Prati that brings contemporary coffee culture to Rome — a city still largely devoted to traditional espresso. They roast their own beans and serve filter coffee, pour-overs, and flat whites alongside classic espresso drinks.</p>
-      <p>The minimalist, Scandinavian-inspired interior is a departure from Rome's ornate café tradition, attracting a younger, international crowd. It's become a reliable stop for travelers who appreciate specialty coffee without abandoning the charm of drinking it in Rome.</p>
+      <p><strong>Pergamino</strong> es un café de especialidad de tercera ola en Prati que trae la cultura de café contemporáneo a Roma — una ciudad aún mayormente devota del espresso tradicional. Tuestan sus propios granos y sirven café de filtro, pour-over y flat white junto con espressos clásicos.</p>
+      <p>El interior minimalista de inspiración nórdica es un contraste con la tradición ornamentada de los cafés romanos, atrayendo a un público más joven e internacional. Se ha convertido en una parada confiable para viajeros que aprecian el café de especialidad sin perder el encanto de tomarlo en Roma.</p>
       <h3>Tips</h3>
-      <p>A flat white or filter runs €3.50–5, more than a traditional Roman bar but standard for specialty coffee. They also serve excellent pastries and light breakfast items. Good Wi-Fi and laptop-friendly. Located on Via dei Gracchi — easy to combine with a Vatican day. Open daily from early morning.</p>
+      <p>Un flat white o filtro cuesta €3,50–5, más que un bar romano tradicional pero estándar para café de especialidad. También sirven excelentes pasteles y desayunos ligeros. Buen Wi-Fi y apto para laptops. Ubicado en Via dei Gracchi — fácil de combinar con un día de Vaticano. Abierto todos los días desde temprano.</p>
     `
   },
   "gelateria-gracchi": {
     title: "Gelateria dei Gracchi",
     html: `
-      <p><strong>Gelateria dei Gracchi</strong> is widely considered one of the top gelaterias in all of Rome. Founded by master gelato maker <strong>Alberto Manassei</strong>, it uses only fresh, seasonal ingredients with no artificial additives — real pistachio from Bronte, hazelnuts from Piedmont, and seasonal fruits.</p>
-      <p>The texture is what sets it apart: dense, creamy, and intensely flavored without being too sweet. Their pistachio, salted caramel, and seasonal fruit sorbets consistently rank among Rome's best. The shop in Prati has a loyal following of neighborhood regulars.</p>
+      <p><strong>Gelateria dei Gracchi</strong> está considerada una de las mejores heladerías de toda Roma. Fundada por el maestro heladero <strong>Alberto Manassei</strong>, usa solo ingredientes frescos y de temporada sin aditivos artificiales — pistacho real de Bronte, avellanas del Piamonte y frutas de temporada.</p>
+      <p>La textura es lo que la distingue: densa, cremosa e intensamente saborizada sin ser demasiado dulce. Su pistacho, caramelo salado y sorbetes de fruta de temporada están consistentemente entre los mejores de Roma. La tienda en Prati tiene seguidores fieles del barrio.</p>
       <h3>Tips</h3>
-      <p>Try the <strong>pistachio</strong> — it's consistently ranked among Rome's top three. Flavors change seasonally, so ask what's new. A medium cup (€3.50) allows 2–3 flavors. The Via dei Gracchi location is the original; there's a second shop near Piazza Navona. Open until late evening. Cash and cards accepted.</p>
+      <p>Probar el <strong>pistacho</strong> — está consistentemente en el top tres de Roma. Los sabores cambian por temporada, preguntar qué hay nuevo. Un vaso mediano (€3,50) permite 2–3 sabores. El local de Via dei Gracchi es el original; hay otro cerca de Piazza Navona. Abierto hasta tarde. Efectivo y tarjetas.</p>
     `
   },
   "les-etoiles": {
     title: "Les Étoiles",
     html: `
-      <p><strong>Les Étoiles</strong> (The Stars) is a rooftop restaurant and bar atop the Hotel Atlante Star in Prati. It offers one of Rome's most spectacular panoramic views, with <strong>St. Peter's dome</strong> seemingly close enough to touch, especially lit up at night.</p>
-      <p>The terrace is intimate and elegant, making it one of Rome's most romantic spots. It primarily operates as a fine dining restaurant, but you can visit just for cocktails at the bar — a more accessible way to enjoy the view without committing to a full dinner.</p>
+      <p><strong>Les Étoiles</strong> (Las Estrellas) es un restaurante y bar en la azotea del Hotel Atlante Star en Prati. Ofrece una de las vistas panorámicas más espectaculares de Roma, con la <strong>cúpula de San Pedro</strong> tan cerca que parece que se puede tocar, especialmente iluminada de noche.</p>
+      <p>La terraza es íntima y elegante, convirtiéndola en uno de los lugares más románticos de Roma. Funciona principalmente como restaurante de alta cocina, pero se puede ir solo por cócteles en el bar — una forma más accesible de disfrutar la vista sin comprometerse a una cena completa.</p>
       <h3>Tips</h3>
-      <p>Come for sunset cocktails (€15–20) for the best experience. Dinner is upscale and priced accordingly (€60–80/person). <strong>Reservations strongly recommended</strong>, especially for sunset tables. Smart casual dress code. The elevator takes you to the top floor, and the view hits you immediately. Open seasonally — check ahead in cooler months.</p>
+      <p>Ir para cócteles al atardecer (€15–20) para la mejor experiencia. La cena es de nivel alto y con precios acorde (€60–80/persona). <strong>Reservas muy recomendables</strong>, especialmente para mesas al atardecer. Código de vestimenta smart casual. El ascensor te lleva al último piso y la vista impacta de inmediato. Abierto por temporada — verificar en meses fríos.</p>
     `
   },
   "il-sorpasso": {
     title: "Il Sorpasso",
     html: `
-      <p><strong>Il Sorpasso</strong> is a versatile all-day venue in Prati that seamlessly transitions from morning café to lunch spot to aperitivo bar to dinner restaurant. Named after the classic 1962 Italian film, it has a contemporary industrial-chic interior and a buzzy atmosphere.</p>
-      <p>The brunch is among the best in Rome, the lunch menu features creative Italian dishes, and the aperitivo spread is generous. By night, it transforms into a proper cocktail bar with DJ sets on weekends. It represents the new wave of Roman dining — quality food without the stuffiness.</p>
+      <p><strong>Il Sorpasso</strong> es un local versátil en Prati que funciona todo el día: de café por la mañana a restaurante de almuerzo, bar de aperitivo y restaurante de cena. Nombrado por la película italiana clásica de 1962, tiene un interior industrial-chic contemporáneo y un ambiente vibrante.</p>
+      <p>El brunch es de los mejores de Roma, el menú del almuerzo ofrece platos italianos creativos, y el spread de aperitivo es generoso. De noche se transforma en un bar de cócteles con DJ sets los fines de semana. Representa la nueva ola gastronómica romana — calidad sin la rigidez.</p>
       <h3>Tips</h3>
-      <p>Aperitivo hour (6–8:30 PM) is the sweet spot — a drink (€10–12) comes with a generous buffet spread. Weekend brunch (11 AM–3 PM) is excellent but book ahead. The outdoor tables on Cola di Rienzo are prime people-watching real estate. Open daily from 7:30 AM to late. Cards accepted.</p>
+      <p>La hora del aperitivo (6–8:30 PM) es el momento ideal — un trago (€10–12) viene con un generoso buffet. El brunch del fin de semana (11 AM–3 PM) es excelente pero hay que reservar. Las mesas al aire libre en Cola di Rienzo son perfectas para ver gente pasar. Abierto todos los días desde las 7:30 AM. Aceptan tarjetas.</p>
     `
   },
   "armando-al-pantheon": {
     title: "Armando al Pantheon",
     html: `
-      <p><strong>Armando al Pantheon</strong> has been serving classic Roman cuisine since <strong>1961</strong>, run by the Gargioli family for three generations. Despite its tourist-central location — literally steps from the Pantheon — it's genuinely beloved by locals and consistently excellent.</p>
-      <p>The menu follows Roman tradition strictly: <strong>each day features different dishes</strong>. Tuesday and Friday bring tripe and baccalà (salt cod), Thursday is gnocchi day, Saturday features trippa. Their cacio e pepe and amatriciana are textbook-perfect. Claudio, the current owner, personally oversees the kitchen.</p>
+      <p><strong>Armando al Pantheon</strong> sirve cocina romana clásica desde <strong>1961</strong>, dirigido por la familia Gargioli por tres generaciones. A pesar de su ubicación ultra-turística — literalmente a pasos del Panteón — es genuinamente querido por los locales y consistentemente excelente.</p>
+      <p>El menú sigue la tradición romana estrictamente: <strong>cada día tiene platos diferentes</strong>. Martes y viernes traen tripa y baccalà (bacalao), jueves es día de gnocchi, sábado trippa. Su cacio e pepe y amatriciana son de libro de texto. Claudio, el dueño actual, supervisa personalmente la cocina.</p>
       <h3>Tips</h3>
-      <p><strong>Reservations are absolutely essential</strong> — book 1–2 weeks ahead for dinner, a few days for lunch. The restaurant is small (about 30 seats) so tables go fast. Closed Saturday dinner and all day Sunday. Budget €35–45 per person. Ask for daily specials — they're always the best option. Cash and cards accepted.</p>
+      <p><strong>Reservar es absolutamente imprescindible</strong> — con 1–2 semanas para cena, unos días para almuerzo. El restaurante es pequeño (unos 30 asientos) así que las mesas vuelan. Cerrado sábado cena y todo el domingo. Presupuesto €35–45 por persona. Preguntar por los especiales del día — siempre son la mejor opción.</p>
     `
   },
   "barnum-cafe": {
     title: "Barnum Café",
     html: `
-      <p><strong>Barnum Café</strong> is a design-forward café near Piazza Navona that blends specialty coffee with a curated, artsy atmosphere. Named after P.T. Barnum, the space features mismatched vintage furniture, exposed brick, and rotating art exhibitions.</p>
-      <p>It's a favorite among Rome's creative crowd — architects, designers, and writers — and serves as an informal co-working space during the day. The coffee is a step above standard Italian bars, and they serve fresh juices, homemade cakes, and light lunch options.</p>
+      <p><strong>Barnum Café</strong> es un café con diseño cerca de Piazza Navona que mezcla café de especialidad con un ambiente artístico curado. Nombrado por P.T. Barnum, el espacio tiene muebles vintage dispares, ladrillo visto y exposiciones de arte rotativas.</p>
+      <p>Es favorito de la comunidad creativa de Roma — arquitectos, diseñadores y escritores — y funciona como espacio informal de co-working durante el día. El café está un escalón por encima de los bares italianos estándar, y sirven jugos frescos, tortas caseras y opciones de almuerzo ligero.</p>
       <h3>Tips</h3>
-      <p>Great for a mid-afternoon break between sightseeing in the centro. Laptop-friendly with decent Wi-Fi. The brunch on weekends is popular. Prices are moderate (€3–4 for coffee, €8–12 for lunch). Located on Via del Pellegrino, just south of Piazza Navona. Open daily.</p>
+      <p>Genial para un descanso a media tarde entre visitas turísticas en el centro. Apto para laptops con Wi-Fi decente. El brunch del fin de semana es popular. Precios moderados (€3–4 por café, €8–12 por almuerzo). Ubicado en Via del Pellegrino, al sur de Piazza Navona. Abierto todos los días.</p>
     `
   },
   "terrazza-borromini": {
     title: "Terrazza Borromini",
     html: `
-      <p><strong>Terrazza Borromini</strong> is a rooftop bar and restaurant set atop the historic Palazzo Pamphilj, directly overlooking Piazza Navona from above. The terrace offers a <strong>bird's-eye view</strong> of Bernini's fountains, the piazza's artists and performers, and the surrounding Renaissance and baroque rooftops.</p>
-      <p>The building itself was designed by <strong>Francesco Borromini</strong> in the 17th century for the Pamphilj family. The terrace is relatively recent but the setting is unbeatable — arguably the most spectacular aperitivo view in central Rome.</p>
+      <p><strong>Terrazza Borromini</strong> es un bar y restaurante en la azotea del histórico Palazzo Pamphilj, con vista directa a Piazza Navona desde arriba. La terraza ofrece una <strong>vista panorámica</strong> de las fuentes de Bernini, los artistas de la plaza y los techos renacentistas y barrocos circundantes.</p>
+      <p>El edificio fue diseñado por <strong>Francesco Borromini</strong> en el siglo XVII para la familia Pamphilj. La terraza es relativamente reciente pero el escenario es inigualable — probablemente la vista de aperitivo más espectacular del centro de Roma.</p>
       <h3>Tips</h3>
-      <p><strong>Reserve ahead</strong> for a guaranteed table, especially at sunset. Cocktails run €15–18, which is fair given the view. You can come just for drinks without dining. Sunset is prime time — arrive 30 minutes before for the best light. Smart casual dress is fine. The entrance is on Via di Santa Maria dell'Anima, not directly from the piazza.</p>
+      <p><strong>Reservar con antelación</strong> para mesa garantizada, especialmente al atardecer. Cócteles a €15–18, justo por la vista. Se puede ir solo por tragos sin cenar. El atardecer es el momento ideal — llegar 30 minutos antes para la mejor luz. Smart casual está bien. La entrada es por Via di Santa Maria dell'Anima, no desde la plaza directamente.</p>
     `
   },
   "salotto-42": {
     title: "Salotto 42",
     html: `
-      <p><strong>Salotto 42</strong> is a stylish lounge bar on Piazza di Pietra, facing the imposing columns of the <strong>Temple of Hadrian</strong> (145 AD). The bar blends mid-century modern design with a curated library of art and fashion books, creating a living-room vibe (salotto means "living room").</p>
-      <p>It's a favorite of Rome's fashion and media crowd, and by evening it transforms into a sophisticated cocktail spot. The aperitivo buffet is one of the more generous in the city center, and the setting — lit ancient columns across the piazza — is uniquely atmospheric.</p>
+      <p><strong>Salotto 42</strong> es un bar lounge con estilo en Piazza di Pietra, frente a las imponentes columnas del <strong>Templo de Adriano</strong> (145 d.C.). El bar combina diseño mid-century moderno con una biblioteca curada de libros de arte y moda, creando un ambiente de sala de estar (salotto significa "sala de estar").</p>
+      <p>Es favorito de la gente de moda y medios de Roma, y por la noche se transforma en un sofisticado spot de cócteles. El buffet de aperitivo es de los más generosos del centro, y el escenario — columnas antiguas iluminadas al otro lado de la plaza — es único.</p>
       <h3>Tips</h3>
-      <p>Aperitivo hour (6:30–9 PM) offers drinks (€12–15) with a quality buffet spread. By day it works as a quiet café with great coffee and pastries. The outdoor tables facing the temple columns at night are magical. Open daily. No dress code but the crowd tends stylish. Cards accepted.</p>
+      <p>Hora del aperitivo (6:30–9 PM) ofrece tragos (€12–15) con un buffet de calidad. De día funciona como café tranquilo con buen café y pasteles. Las mesas al aire libre frente a las columnas del templo de noche son mágicas. Abierto todos los días. Sin código de vestimenta pero la gente tiende a ir estilosa. Aceptan tarjetas.</p>
     `
   },
   "ai-tre-scalini": {
     title: "Ai Tre Scalini",
     html: `
-      <p><strong>Ai Tre Scalini</strong> is the quintessential Monti neighborhood wine bar — a beloved, unpretentious spot on Via Panisperna where locals have gathered for decades. The name means "At the Three Steps," referring to the small steps at the entrance.</p>
-      <p>The bar specializes in natural and biodynamic wines from small Italian producers, served by the glass at democratic prices. The atmosphere is what makes it special — on warm evenings, the crowd spills out onto the cobblestoned street, wine glasses in hand, in a scene that captures the essence of Roman social life.</p>
+      <p><strong>Ai Tre Scalini</strong> es el bar de vinos por excelencia del barrio Monti — un lugar querido y sin pretensiones en Via Panisperna donde los locales se reúnen desde hace décadas. El nombre significa "En los Tres Escalones", refiriéndose a los pequeños escalones de la entrada.</p>
+      <p>El bar se especializa en vinos naturales y biodinámicos de pequeños productores italianos, servidos por copa a precios democráticos. La atmósfera es lo que lo hace especial — en las tardes cálidas, la gente se desborda hacia la calle empedrada, copa en mano, en una escena que captura la esencia de la vida social romana.</p>
       <h3>Tips</h3>
-      <p>No reservations — just show up and squeeze in. Wine by the glass starts at €4–5. They serve simple but excellent snacks: cheese boards, bruschetta, and seasonal plates. Prime time is 7–10 PM when the street becomes an impromptu party. Monti is Rome's trendiest neighborhood — explore the vintage shops nearby. Closed Mondays.</p>
+      <p>Sin reservas — solo llegar y acomodarse. Vino por copa desde €4–5. Sirven snacks simples pero excelentes: tablas de quesos, bruschetta y platos de temporada. El momento ideal es de 7–10 PM cuando la calle se convierte en una fiesta improvisada. Monti es el barrio más trendy de Roma — explorar las tiendas vintage cercanas. Cerrado lunes.</p>
     `
   },
   "drink-kong": {
     title: "Drink Kong",
     html: `
-      <p><strong>Drink Kong</strong> is one of Rome's most acclaimed cocktail bars, ranked on the <strong>World's 50 Best Bars</strong> list. Created by bartender Patrick Pistolesi, it occupies a multi-room space in Monti with a retro-futuristic design inspired by 1970s Italian design and Japanese aesthetics.</p>
-      <p>Each room has a different vibe — from the neon-lit main bar to a cozy listening room with vinyl records. The cocktails are creative and precise, using house-made ingredients, unusual infusions, and seasonal Italian produce. It's a serious cocktail destination dressed in playful clothes.</p>
+      <p><strong>Drink Kong</strong> es uno de los bares de cócteles más aclamados de Roma, incluido en la lista de los <strong>50 Mejores Bares del Mundo</strong>. Creado por el bartender Patrick Pistolesi, ocupa un espacio de varias salas en Monti con un diseño retro-futurista inspirado en el diseño italiano de los 70 y la estética japonesa.</p>
+      <p>Cada sala tiene un ambiente diferente — desde el bar principal con luces de neón hasta una acogedora sala de escucha con discos de vinilo. Los cócteles son creativos y precisos, usando ingredientes hechos en casa, infusiones inusuales y productos italianos de temporada. Es un destino serio de coctelería vestido de manera lúdica.</p>
       <h3>Tips</h3>
-      <p><strong>Reservations strongly recommended</strong> — book online through their website. Cocktails run €14–18. The menu changes seasonally; ask the bartender for recommendations based on your taste. Open from 6 PM to 2 AM, closed Mondays. Smart casual dress. The entrance is deliberately understated — look for the small sign on Piazza di San Martino ai Monti.</p>
+      <p><strong>Reservas muy recomendables</strong> — reservar online en su web. Cócteles a €14–18. El menú cambia por temporada; pedir recomendaciones al bartender según tus gustos. Abierto de 6 PM a 2 AM, cerrado lunes. Smart casual. La entrada es deliberadamente discreta — buscar el cartel pequeño en Piazza di San Martino ai Monti.</p>
     `
   },
   "colosseum": {
-    title: "Colosseum",
+    title: "Coliseo",
     html: `
-      <p>The <strong>Colosseum</strong> (Amphitheatrum Flavium) is the largest amphitheater ever built, completed in <strong>80 AD</strong> under Emperor Titus. At its peak, it held <strong>50,000–80,000 spectators</strong> who watched gladiatorial contests, animal hunts, mock sea battles, and public executions.</p>
-      <p>The arena floor covered an elaborate underground network called the <strong>hypogeum</strong> — a labyrinth of tunnels and cages where gladiators and wild animals waited before being raised to the surface via 80 vertical lifts. The building is a masterpiece of Roman engineering: 80 arched entrances allowed the entire audience to be seated within 15 minutes. The outer wall originally stood 48 meters tall — earthquakes and stone-robbers took the rest.</p>
-      <p>After the fall of Rome, the Colosseum was used as a quarry, fortress, church, and housing. Nearly two-thirds of the original structure was stripped for building material, including St. Peter's Basilica.</p>
+      <p>El <strong>Coliseo</strong> (Amphitheatrum Flavium) es el anfiteatro más grande jamás construido, terminado en el <strong>80 d.C.</strong> bajo el emperador Tito. En su apogeo, albergaba <strong>50.000–80.000 espectadores</strong> que veían combates de gladiadores, cacerías de animales, batallas navales simuladas y ejecuciones públicas.</p>
+      <p>El suelo de la arena cubría una elaborada red subterránea llamada <strong>hipogeo</strong> — un laberinto de túneles y jaulas donde gladiadores y animales salvajes esperaban antes de ser elevados a la superficie mediante 80 ascensores verticales. El edificio es una obra maestra de la ingeniería romana: 80 entradas en arco permitían que todo el público se sentara en 15 minutos. El muro exterior medía originalmente 48 metros — terremotos y saqueadores se llevaron el resto.</p>
+      <p>Tras la caída de Roma, el Coliseo fue usado como cantera, fortaleza, iglesia y vivienda. Casi dos tercios de la estructura original fueron desmontados para material de construcción, incluida la Basílica de San Pedro.</p>
       <h3>Tips</h3>
-      <p><strong>Book tickets online in advance</strong> (€16–24 depending on access level). The combined ticket includes the Roman Forum and Palatine Hill, valid for 24–48 hours. The <strong>underground (hypogeum) tour</strong> is worth the extra cost — book the "Full Experience" ticket. Arrive at opening (9 AM) or after 3 PM to avoid peak crowds. Allow 1.5–2 hours for the Colosseum alone, plus 2–3 hours for the Forum. Bring water — shade is limited.</p>
+      <p><strong>Comprar entradas online con antelación</strong> (€16–24 según nivel de acceso). La entrada combinada incluye el Foro Romano y el Palatino, válida 24–48 horas. El <strong>tour subterráneo (hipogeo)</strong> vale el costo extra — comprar la entrada "Full Experience". Llegar a la apertura (9 AM) o después de las 3 PM para evitar multitudes. Dedicar 1,5–2 horas al Coliseo solo, más 2–3 horas para el Foro. Llevar agua — hay poca sombra.</p>
     `
   },
   "pizzarium": {
     title: "Pizzarium",
     html: `
-      <p><strong>Pizzarium Bonci</strong> is the pizza al taglio shop of legendary pizza maker <strong>Gabriele Bonci</strong>, considered by many to be the world's greatest pizza baker. His approach combines Roman-style pizza al taglio with artisanal bread-making techniques: 72-hour fermented dough, organic flours, and seasonal toppings.</p>
-      <p>The rotating selection of toppings is wildly creative — think mortadella with pistachio cream, burrata with anchovies, or pumpkin with smoked provola. The crust is impossibly light and airy, with a crispy bottom and cloud-like interior. Despite Bonci's celebrity status (he's a regular on Italian TV), the shop remains a humble walk-up counter.</p>
+      <p><strong>Pizzarium Bonci</strong> es la pizzería al taglio del legendario pizzero <strong>Gabriele Bonci</strong>, considerado por muchos el mejor pizzero del mundo. Su enfoque combina la pizza al taglio romana con técnicas artesanales de panadería: masa fermentada 72 horas, harinas orgánicas y toppings de temporada.</p>
+      <p>La selección rotativa de toppings es salvajemente creativa — mortadela con crema de pistacho, burrata con anchoas, o calabaza con provola ahumada. La masa es imposiblemente ligera y aireada, con fondo crujiente e interior de nube. A pesar de la fama de Bonci (es habitual en la TV italiana), el local sigue siendo un humilde mostrador.</p>
       <h3>Tips</h3>
-      <p>Located near the Vatican (Via della Meloria), it's perfect for lunch on a Vatican day. Pizza is sold by weight — point and they'll cut. Budget €8–12 for a satisfying meal. There are only a few standing spots outside, so many eat on the nearby benches. Open Mon–Sat, 11 AM–10 PM. Closed Sundays. Always a line at peak hours — come at 11 AM or 3 PM to avoid it.</p>
+      <p>Ubicado cerca del Vaticano (Via della Meloria), perfecto para almorzar en un día de Vaticano. La pizza se vende por peso — señalar y cortan. Presupuesto €8–12 para una comida satisfactoria. Solo hay unos pocos puestos de pie afuera, muchos comen en los bancos cercanos. Abierto lun–sáb, 11 AM–10 PM. Cerrado domingos. Siempre hay cola en horas pico — ir a las 11 AM o 3 PM.</p>
     `
   },
   "forno-campo-fiori": {
     title: "Forno Campo de' Fiori",
     html: `
-      <p><strong>Forno Campo de' Fiori</strong> is a historic bakery on one of Rome's most beloved piazzas. It's famous for its <strong>pizza bianca</strong> — a simple, impossibly addictive flatbread made with just flour, water, olive oil, and salt. The pizza comes out of the oven all day, and Romans have been lining up for it since the 1960s.</p>
-      <p>Campo de' Fiori itself is a lively square that hosts a <strong>daily morning market</strong> (Mon–Sat) selling fresh produce, flowers, and spices. The square's name means "Field of Flowers," and its darker history includes the burning of philosopher Giordano Bruno (whose statue stands in the center) in 1600 for heresy.</p>
+      <p><strong>Forno Campo de' Fiori</strong> es una panadería histórica en una de las plazas más queridas de Roma. Es famoso por su <strong>pizza bianca</strong> — un pan plano simple, imposiblemente adictivo, hecho solo con harina, agua, aceite de oliva y sal. La pizza sale del horno todo el día, y los romanos hacen cola por ella desde los años 60.</p>
+      <p>Campo de' Fiori es una plaza animada que alberga un <strong>mercado matutino diario</strong> (lun–sáb) de productos frescos, flores y especias. El nombre de la plaza significa "Campo de Flores", y su historia más oscura incluye la quema del filósofo Giordano Bruno (cuya estatua está en el centro) en 1600 por herejía.</p>
       <h3>Tips</h3>
-      <p>The pizza bianca is best eaten warm, fresh from the oven — get there early. A big piece costs €2–3 and makes a perfect walking snack. They also make excellent pizza rossa (with tomato). The morning market is worth visiting for the atmosphere. In the evening, the piazza transforms into a nightlife spot with bars. Cash only at the forno.</p>
+      <p>La pizza bianca es mejor comerla caliente, recién salida del horno — llegar temprano. Un trozo grande cuesta €2–3 y es el snack perfecto para caminar. También hacen excelente pizza rossa (con tomate). El mercado matutino vale la pena por el ambiente. Por la noche, la plaza se transforma en zona de bares. Solo efectivo en el forno.</p>
     `
   },
   "villa-borghese": {
     title: "Villa Borghese",
     html: `
-      <p><strong>Villa Borghese</strong> is Rome's most famous public park, spanning 80 hectares of landscaped gardens, fountains, and museums. Originally the vineyard and garden of Cardinal Scipione Borghese (nephew of Pope Paul V), it was purchased by the Italian state in 1903.</p>
-      <p>The park houses the <strong>Galleria Borghese</strong>, one of the world's finest small museums, featuring Bernini's breathtaking sculptures (<em>Apollo and Daphne</em>, <em>The Rape of Proserpina</em>), Caravaggio's paintings, and works by Titian and Raphael. The garden itself features a lake with rowboats, the Pincio terrace with panoramic views, and a replica Shakespearean theater.</p>
+      <p><strong>Villa Borghese</strong> es el parque público más famoso de Roma, con 80 hectáreas de jardines, fuentes y museos. Originalmente el viñedo y jardín del Cardenal Scipione Borghese (sobrino del Papa Paulo V), fue adquirido por el estado italiano en 1903.</p>
+      <p>El parque alberga la <strong>Galleria Borghese</strong>, uno de los mejores museos pequeños del mundo, con las esculturas impresionantes de Bernini (<em>Apolo y Dafne</em>, <em>El Rapto de Proserpina</em>), pinturas de Caravaggio, y obras de Tiziano y Rafael. El jardín tiene un lago con botes de remo, la terraza del Pincio con vistas panorámicas, y un teatro shakespeariano.</p>
       <h3>Tips</h3>
-      <p>The <strong>Galleria Borghese requires advance reservations</strong> (€15) — entries are in 2-hour time slots and sell out days ahead. Book at galleriaborghese.beniculturali.it. The park itself is free and open dawn to dusk. Rent a rowboat on the lake (€3/20 min). The <strong>Pincio terrace</strong> above Piazza del Popolo offers the best sunset view in Rome — arrive 30 minutes before sunset. Rent bikes or Segways at the park entrances.</p>
+      <p>La <strong>Galleria Borghese requiere reserva anticipada</strong> (€15) — las entradas son en turnos de 2 horas y se agotan con días de antelación. Reservar en galleriaborghese.beniculturali.it. El parque es gratis y abre de amanecer a atardecer. Alquilar un bote en el lago (€3/20 min). La <strong>terraza del Pincio</strong> sobre Piazza del Popolo tiene la mejor vista del atardecer en Roma — llegar 30 minutos antes. Se alquilan bicis y Segways en las entradas del parque.</p>
     `
   },
   "piazza-del-popolo": {
     title: "Piazza del Popolo",
     html: `
-      <p><strong>Piazza del Popolo</strong> (People's Square) was for centuries the first sight greeting travelers entering Rome from the north via the ancient Via Flaminia. The massive Egyptian <strong>obelisk</strong> at its center — originally from Heliopolis, 13th century BC — was brought to Rome by Augustus and placed here by Pope Sixtus V in 1589.</p>
-      <p>The piazza is flanked by the <strong>twin churches</strong> of Santa Maria dei Miracoli and Santa Maria in Montesanto (1670s), which create a dramatic gateway to the three streets fanning out toward the center of Rome. The church of <strong>Santa Maria del Popolo</strong> on the north side contains two Caravaggio masterpieces (free to view) and Bernini's Chigi Chapel.</p>
+      <p><strong>Piazza del Popolo</strong> (Plaza del Pueblo) fue durante siglos la primera vista que recibía a los viajeros que entraban a Roma desde el norte por la antigua Via Flaminia. El enorme <strong>obelisco</strong> egipcio en su centro — originalmente de Heliópolis, siglo XIII a.C. — fue traído a Roma por Augusto y colocado aquí por el Papa Sixto V en 1589.</p>
+      <p>La plaza está flanqueada por las <strong>iglesias gemelas</strong> de Santa Maria dei Miracoli y Santa Maria in Montesanto (1670s), que crean una entrada dramática a las tres calles que se abren hacia el centro de Roma. La iglesia de <strong>Santa Maria del Popolo</strong> al norte contiene dos obras maestras de Caravaggio (entrada libre) y la Capilla Chigi de Bernini.</p>
       <h3>Tips</h3>
-      <p>Visit <strong>Santa Maria del Popolo</strong> for Caravaggio's <em>Crucifixion of St. Peter</em> and <em>Conversion on the Way to Damascus</em> — free entry, usually uncrowded. From the piazza, climb to the <strong>Pincio terrace</strong> above for the best panoramic view. The piazza is car-free and great for a stroll. The historic cafés Rosati and Canova (rivals since the 1800s) face each other across the square.</p>
+      <p>Visitar <strong>Santa Maria del Popolo</strong> para ver la <em>Crucifixión de San Pedro</em> y la <em>Conversión en el Camino de Damasco</em> de Caravaggio — entrada gratis, generalmente sin multitudes. Desde la plaza, subir a la <strong>terraza del Pincio</strong> para la mejor vista panorámica. La plaza es peatonal y genial para pasear. Los históricos cafés Rosati y Canova (rivales desde el 1800) se miran desde lados opuestos de la plaza.</p>
     `
   },
   "faro-coffee": {
     title: "Faro – Specialty Coffee",
     html: `
-      <p><strong>Faro</strong> is widely regarded as one of the <strong>best specialty coffee shops in Rome</strong>, bringing Nordic-style third-wave coffee culture to the heart of the city. They roast their own beans, sourced directly from farms, and offer single-origin pour-overs, Aeropress, V60, and expertly pulled espresso.</p>
-      <p>The shop is minimalist and bright, a stark contrast to Rome's traditional dark-wood cafés. The baristas are serious about their craft — many are competition-level — and will happily guide you through their current bean selections and brewing methods.</p>
+      <p><strong>Faro</strong> está considerado uno de los <strong>mejores cafés de especialidad de Roma</strong>, trayendo la cultura de café de tercera ola al corazón de la ciudad. Tuestan sus propios granos, comprados directamente a productores, y ofrecen pour-over de origen único, Aeropress, V60 y espressos magistrales.</p>
+      <p>El local es minimalista y luminoso, un contraste marcado con los tradicionales cafés romanos de madera oscura. Los baristas se toman en serio su oficio — muchos compiten a nivel profesional — y te guían con gusto por su selección actual de granos y métodos de preparación.</p>
       <h3>Tips</h3>
-      <p>Filter coffee and pour-overs run €4–6, espresso €2–3. They also serve excellent pastries. The space is small, so seats fill up fast, but the vibe is relaxed and welcoming. Located near Largo di Torre Argentina. If you love specialty coffee, this is the one shop in Rome you shouldn't miss. Open daily from 8 AM.</p>
+      <p>Café de filtro y pour-over a €4–6, espresso €2–3. También sirven excelentes pasteles. El espacio es pequeño, así que los asientos se llenan rápido, pero el ambiente es relajado y acogedor. Ubicado cerca de Largo di Torre Argentina. Si te gusta el café de especialidad, este es el lugar que no te podés perder en Roma. Abierto todos los días desde las 8 AM.</p>
     `
   },
   "caffe-greco": {
     title: "Antico Caffè Greco",
     html: `
-      <p>Founded in <strong>1760</strong>, <strong>Antico Caffè Greco</strong> is the oldest café in Rome and one of the oldest in the world. Located on the prestigious Via Condotti (Rome's luxury shopping street, near the Spanish Steps), it has hosted an extraordinary roster of patrons: Goethe, Keats, Byron, Liszt, Stendhal, Hans Christian Andersen, and Casanova all took their coffee here.</p>
-      <p>The interior is a museum in itself — over 300 paintings and sculptures line the intimate red-velvet rooms, creating an atmosphere that has barely changed in 260 years. It remains a working café, serving espresso and pastries alongside its history.</p>
+      <p>Fundado en <strong>1760</strong>, el <strong>Antico Caffè Greco</strong> es el café más antiguo de Roma y uno de los más antiguos del mundo. Ubicado en la prestigiosa Via Condotti (la calle de compras de lujo de Roma, cerca de la Plaza de España), ha recibido una lista extraordinaria de clientes: Goethe, Keats, Byron, Liszt, Stendhal, Hans Christian Andersen y Casanova tomaron su café aquí.</p>
+      <p>El interior es un museo en sí mismo — más de 300 pinturas y esculturas adornan las íntimas salas de terciopelo rojo, creando una atmósfera que apenas ha cambiado en 260 años. Sigue siendo un café en funcionamiento, sirviendo espresso y pasteles junto con su historia.</p>
       <h3>Tips</h3>
-      <p>Standing at the bar: espresso €1.50. Sitting at a table: espresso €7+. The table surcharge is steep but you're paying for the ambiance and history. Worth it for one visit — take a seat and soak in the atmosphere. The café is beautiful for photos. Located at Via dei Condotti 86, steps from the Spanish Steps. Open daily.</p>
+      <p>De pie en la barra: espresso €1,50. Sentado en mesa: espresso €7+. El recargo por mesa es fuerte pero pagás por el ambiente y la historia. Vale la pena una vez — sentarse y absorber la atmósfera. El café es hermoso para fotos. Ubicado en Via dei Condotti 86, a pasos de la Plaza de España. Abierto todos los días.</p>
     `
   },
   "il-convivio-troiani": {
     title: "Il Convivio Troiani",
     html: `
-      <p><strong>Il Convivio Troiani</strong> is a <strong>Michelin-starred</strong> restaurant run by the three Troiani brothers, offering refined modern Roman cuisine in an elegant setting near Piazza Navona. Since 1998, it has been one of Rome's most respected fine dining destinations.</p>
-      <p>The menu reimagines traditional Italian ingredients with contemporary technique — expect dishes like artichoke in textures, aged pigeon with black garlic, and creative pasta courses that honor Roman tradition while pushing boundaries. The wine cellar holds over 3,000 labels, with sommeliers guiding the pairing.</p>
+      <p><strong>Il Convivio Troiani</strong> es un restaurante con <strong>estrella Michelin</strong> dirigido por los tres hermanos Troiani, que ofrece cocina romana moderna refinada en un ambiente elegante cerca de Piazza Navona. Desde 1998, es uno de los destinos de alta cocina más respetados de Roma.</p>
+      <p>El menú reimagina ingredientes italianos tradicionales con técnica contemporánea — esperá platos como alcachofa en texturas, pichón madurado con ajo negro, y platos de pasta creativos que honran la tradición romana mientras empujan los límites. La bodega tiene más de 3.000 etiquetas, con sommeliers guiando el maridaje.</p>
       <h3>Tips</h3>
-      <p><strong>Reservations essential</strong> — book well ahead. Tasting menus run €120–160, à la carte mains €35–50. Lunch is more accessible with a shorter menu. Dress code is smart elegant. The dining room is intimate and romantic — perfect for a special evening. Closed Sundays. Located on Vicolo dei Soldati, a quiet street near Piazza Navona.</p>
+      <p><strong>Reservar es imprescindible</strong> — con bastante antelación. Los menús degustación van de €120–160, platos principales a la carta €35–50. El almuerzo es más accesible con un menú más corto. Código de vestimenta smart elegante. El comedor es íntimo y romántico — perfecto para una noche especial. Cerrado domingos. Ubicado en Vicolo dei Soldati, una calle tranquila cerca de Piazza Navona.</p>
     `
   },
   "ai-marmi": {
     title: "Ai Marmi (Panattoni)",
     html: `
-      <p><strong>Ai Marmi</strong> — officially Pizzeria Panattoni but universally known by its nickname meaning "at the marble tables" — is a Trastevere institution famous for its <strong>thin, crispy Roman-style pizza</strong>. The marble slab tables that gave the place its name have also earned it another nickname: <em>"l'obitorio"</em> (the morgue).</p>
-      <p>Open since the 1950s, it's a no-frills, boisterous pizzeria where Romans go for honest pizza at honest prices. The <strong>supplì</strong> (fried rice balls with melted mozzarella inside) and <strong>fried baccalà</strong> (salt cod) are legendary starters — get them before your pizza arrives.</p>
+      <p><strong>Ai Marmi</strong> — oficialmente Pizzeria Panattoni pero universalmente conocida por su apodo que significa "en las mesas de mármol" — es una institución de Trastevere famosa por su <strong>pizza romana fina y crujiente</strong>. Las mesas de mármol que le dieron nombre también le ganaron otro apodo: <em>"l'obitorio"</em> (la morgue).</p>
+      <p>Abierta desde los años 50, es una pizzería bulliciosa y sin pretensiones donde los romanos van por pizza honesta a precios honestos. Los <strong>supplì</strong> (bolas de arroz fritas con mozzarella derretida adentro) y el <strong>baccalà frito</strong> (bacalao) son entrantes legendarios — pedirlos antes de que llegue la pizza.</p>
       <h3>Tips</h3>
-      <p>Expect a queue — it doesn't take reservations and there's always a line, especially on weekends. Move fast: 20–30 min wait is typical. Pizzas run €7–10, supplì €2. Cash only. Open for dinner only (6:30 PM–midnight), closed Wednesdays. The Trastevere setting is lively — walk around the neighborhood after dinner.</p>
+      <p>Esperar cola — no aceptan reservas y siempre hay fila, especialmente los fines de semana. Se mueve rápido: 20–30 min de espera es lo típico. Pizzas a €7–10, supplì €2. Solo efectivo. Abierto solo para cena (6:30 PM–medianoche), cerrado miércoles. Trastevere es animado — caminar por el barrio después de cenar.</p>
     `
   },
   "la-gatta-mangiona": {
     title: "La Gatta Mangiona",
     html: `
-      <p><strong>La Gatta Mangiona</strong> is a destination pizzeria in the residential Monteverde neighborhood, away from the tourist center. It specializes in <strong>gourmet pizza</strong> — creative toppings on perfectly fermented, high-hydration dough that balances crunch and chew.</p>
-      <p>The toppings rotate seasonally and feature quality ingredients: buffalo mozzarella, 'nduja from Calabria, burrata, seasonal vegetables, and artisanal cured meats. It's the kind of pizza that converts people who think they've already had the best — and the reason locals gladly make the trek to Monteverde.</p>
+      <p><strong>La Gatta Mangiona</strong> es una pizzería de destino en el barrio residencial de Monteverde, lejos del centro turístico. Se especializa en <strong>pizza gourmet</strong> — toppings creativos sobre masa perfectamente fermentada de alta hidratación que equilibra crocancia y masticabilidad.</p>
+      <p>Los toppings rotan por temporada y usan ingredientes de calidad: mozzarella de búfala, 'nduja de Calabria, burrata, verduras de temporada y embutidos artesanales. Es el tipo de pizza que convierte a la gente que piensa que ya probó la mejor — y la razón por la que los locales van felices hasta Monteverde.</p>
       <h3>Tips</h3>
-      <p><strong>Reservations recommended</strong> for dinner, especially weekends. It's a 20-minute taxi from the center (or tram #8). Pizzas €8–14. The fried starters are excellent. They have a solid craft beer selection — unusual for Rome. Closed Mondays. The neighborhood itself is charming and very local — worth exploring if you have time.</p>
+      <p><strong>Reservas recomendables</strong> para cena, especialmente fines de semana. Está a 20 minutos en taxi del centro (o tranvía #8). Pizzas a €8–14. Las entradas fritas son excelentes. Tienen buena selección de cerveza artesanal — inusual para Roma. Cerrado lunes. El barrio es encantador y muy local.</p>
     `
   },
   "stravinskij-bar": {
     title: "Stravinskij Bar – Hotel de Russie",
     html: `
-      <p>The <strong>Stravinskij Bar</strong> occupies the secret garden of the <strong>Hotel de Russie</strong>, one of Rome's most prestigious five-star hotels, located between Piazza del Popolo and the Spanish Steps. The hidden courtyard garden — terraced with orange trees, ivy-covered walls, and soft lighting — feels like a private oasis in the heart of Rome.</p>
-      <p>The hotel's guest list reads like a who's who of culture: Picasso, Cocteau, and Stravinsky himself all stayed here (hence the bar's name). Today it attracts a fashionable crowd of locals and international guests for cocktails in one of Rome's most exclusive settings.</p>
+      <p>El <strong>Stravinskij Bar</strong> ocupa el jardín secreto del <strong>Hotel de Russie</strong>, uno de los hoteles cinco estrellas más prestigiosos de Roma, ubicado entre Piazza del Popolo y la Plaza de España. El patio escondido — con terrazas de naranjos, paredes cubiertas de hiedra e iluminación suave — se siente como un oasis privado en el corazón de Roma.</p>
+      <p>La lista de huéspedes del hotel es un quién es quién de la cultura: Picasso, Cocteau y el propio Stravinsky se hospedaron aquí (de ahí el nombre del bar). Hoy atrae a una clientela fashionista de locales e internacionales para cócteles en uno de los escenarios más exclusivos de Roma.</p>
       <h3>Tips</h3>
-      <p>Cocktails run €18–25 — expensive but the setting is extraordinary. No strict dress code but smart casual is appropriate. <strong>No reservations needed</strong> for the bar, but arrive early on weekends for garden seating. The Negroni and the bar's signature cocktails are excellent. Open daily from 11 AM. The garden is heated in cooler months.</p>
+      <p>Cócteles a €18–25 — caro pero el escenario es extraordinario. Sin código de vestimenta estricto pero smart casual es lo apropiado. <strong>No se necesitan reservas</strong> para el bar, pero llegar temprano los fines de semana para asiento en el jardín. El Negroni y los cócteles de la casa son excelentes. Abierto todos los días desde las 11 AM. El jardín tiene calefacción en meses fríos.</p>
     `
   },
   "caffe-delle-arti": {
     title: "Caffè delle Arti",
     html: `
-      <p><strong>Caffè delle Arti</strong> is the café and restaurant of the <strong>Galleria Nazionale d'Arte Moderna</strong> (National Gallery of Modern Art) inside Villa Borghese park. The terrace overlooks the museum's neoclassical facade and the surrounding gardens, creating a serene, leafy atmosphere far from the chaos of central Rome.</p>
-      <p>It functions as both a museum café for visitors and an independent restaurant popular with Romans for relaxed weekend lunches. The menu features modern Italian cuisine — light salads, creative pastas, and seasonal dishes — served in an art-world ambiance.</p>
+      <p><strong>Caffè delle Arti</strong> es el café y restaurante de la <strong>Galleria Nazionale d'Arte Moderna</strong> (Galería Nacional de Arte Moderno) dentro del parque Villa Borghese. La terraza da a la fachada neoclásica del museo y los jardines circundantes, creando un ambiente sereno y verde lejos del caos del centro.</p>
+      <p>Funciona como café del museo para visitantes y como restaurante independiente popular entre los romanos para almuerzos relajados de fin de semana. El menú ofrece cocina italiana moderna — ensaladas ligeras, pastas creativas y platos de temporada — servidos en un ambiente artístico.</p>
       <h3>Tips</h3>
-      <p>You don't need a museum ticket to visit the café — it has its own entrance. The terrace is the highlight, especially on warm afternoons. Aperitivo hour (6–8 PM) is lovely here. Budget €10–15 for drinks/snacks, €25–35 for a meal. The museum itself (€10) houses works by Klimt, Modigliani, and De Chirico — worth combining. Open Tue–Sun.</p>
+      <p>No se necesita entrada al museo para visitar el café — tiene su propia entrada. La terraza es lo mejor, especialmente en tardes cálidas. La hora del aperitivo (6–8 PM) es encantadora aquí. Presupuesto €10–15 para tragos/snacks, €25–35 para una comida. El museo (€10) tiene obras de Klimt, Modigliani y De Chirico — vale combinar. Abierto mar–dom.</p>
     `
   },
   "blackmarket-hall": {
     title: "Blackmarket Hall",
     html: `
-      <p><strong>Blackmarket Hall</strong> is a speakeasy-style cocktail bar hidden in the Monti neighborhood. True to the speakeasy concept, the entrance is deliberately hard to find — an unmarked door that leads down into a moody, dimly lit space with exposed brick, leather seating, and a vintage atmosphere.</p>
-      <p>The bartenders are skilled and creative, crafting cocktails with house-made syrups, bitters, and infusions. The menu changes seasonally and often features experimental drinks alongside well-executed classics. It's Monti's answer to the cocktail bar trend, with an edge of underground cool.</p>
+      <p><strong>Blackmarket Hall</strong> es un bar de cócteles estilo speakeasy escondido en el barrio Monti. Fiel al concepto de speakeasy, la entrada es deliberadamente difícil de encontrar — una puerta sin marcar que lleva a un espacio oscuro y atmosférico con ladrillo visto, asientos de cuero y un ambiente vintage.</p>
+      <p>Los bartenders son hábiles y creativos, preparando cócteles con jarabes, bitters e infusiones hechos en casa. El menú cambia por temporada y suele incluir tragos experimentales junto con clásicos bien ejecutados. Es la respuesta de Monti a la tendencia de bares de cócteles, con un toque underground.</p>
       <h3>Tips</h3>
-      <p>Look for the entrance on Via dei Capocci in Monti — there's no obvious sign. Cocktails run €12–15. Open from 7 PM to 2 AM, closed Mondays. No reservations — walk in and grab a seat. The crowd is mixed: locals and in-the-know visitors. Perfect as a late-night stop after dinner in Monti. Pairs well with a pre-drink at Ai Tre Scalini.</p>
+      <p>Buscar la entrada en Via dei Capocci en Monti — no hay cartel obvio. Cócteles a €12–15. Abierto de 7 PM a 2 AM, cerrado lunes. Sin reservas — llegar y sentarse. El público es mixto: locales y visitantes informados. Perfecto como parada nocturna después de cenar en Monti. Combina bien con un trago previo en Ai Tre Scalini.</p>
     `
   }
 };
