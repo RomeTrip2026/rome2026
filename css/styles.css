@@ -384,6 +384,23 @@ html, body {
   color: #bbb;
 }
 
+.place-item.optional {
+  opacity: 0.55;
+}
+
+.optional-tag {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: #ccc;
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
 .route-btn {
   background: none;
   border: none;

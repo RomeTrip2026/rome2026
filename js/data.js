@@ -152,6 +152,17 @@ const TRIP_DATA = {
           description: "Enoteca histórica en Piazza Navona 🎯 Diego's tip",
           time: "18:00",
           category: "tragos"
+        },
+        // Opcionales
+        {
+          id: "campo-de-fiori",
+          name: "Campo de' Fiori",
+          lat: 41.8956,
+          lng: 12.4722,
+          description: "Mercado matutino en plaza histórica",
+          time: "09:00",
+          category: "landmark",
+          optional: true
         }
       ]
     },
@@ -319,6 +330,57 @@ const TRIP_DATA = {
           description: "Cocktail bar de diseño en Monti. Reservar",
           time: "21:00",
           category: "tragos"
+        },
+        // Opcionales
+        {
+          id: "jardin-naranjos",
+          name: "Jardín de los Naranjos",
+          lat: 41.8854,
+          lng: 12.4799,
+          description: "Giardino degli Aranci. Mirador con vista panorámica al Tíber",
+          time: "17:00",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "ojo-cerradura",
+          name: "Ojo de la Cerradura",
+          lat: 41.8829,
+          lng: 12.4784,
+          description: "Buco della Serratura — vista perfecta del domo de San Pedro por la cerradura",
+          time: "17:15",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "santa-sabina",
+          name: "Basílica Santa Sabina",
+          lat: 41.8840,
+          lng: 12.4745,
+          description: "Basílica paleocristiana del siglo V en el Aventino",
+          time: "17:30",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "pasticceria-regoli",
+          name: "Pasticceria Regoli",
+          lat: 41.8948,
+          lng: 12.5009,
+          description: "Pastelería histórica. Famosa por su maritozzo",
+          time: "15:30",
+          category: "cafe",
+          optional: true
+        },
+        {
+          id: "fatamorgana",
+          name: "Fatamorgana",
+          lat: 41.8956,
+          lng: 12.4933,
+          description: "Helado artesanal con sabores creativos en Monti",
+          time: "16:00",
+          category: "helado",
+          optional: true
         }
       ]
     },
@@ -374,6 +436,47 @@ const TRIP_DATA = {
           description: "Cocktail bar de diseño en Monti",
           time: "21:00",
           category: "tragos"
+        },
+        // Opcionales
+        {
+          id: "san-clemente",
+          name: "Basílica San Clemente",
+          lat: 41.8893,
+          lng: 12.4976,
+          description: "Iglesia con 3 niveles arqueológicos. A 5 min del Coliseo",
+          time: "11:00",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "mordi-e-vai",
+          name: "Mordi e Vai",
+          lat: 41.8775,
+          lng: 12.4731,
+          description: "Puesto 15 del Mercato Testaccio. Sándwiches romanos legendarios",
+          time: "13:00",
+          category: "comida",
+          optional: true
+        },
+        {
+          id: "da-remo",
+          name: "Da Remo",
+          lat: 41.8809,
+          lng: 12.4755,
+          description: "Pizza romana clásica en Testaccio. Ambiente local",
+          time: "20:00",
+          category: "comida",
+          optional: true
+        },
+        {
+          id: "flavio-velavevodetto",
+          name: "Flavio al Velavevodetto",
+          lat: 41.8766,
+          lng: 12.4760,
+          description: "Trattoria romana auténtica en Testaccio. Cacio e pepe top",
+          time: "20:00",
+          category: "comida",
+          optional: true
         }
       ]
     },
@@ -475,6 +578,27 @@ const TRIP_DATA = {
           description: "Speakeasy en Monti. Cócteles creativos",
           time: "22:00",
           category: "tragos"
+        },
+        // Opcionales
+        {
+          id: "tonnarello",
+          name: "Tonnarello",
+          lat: 41.8898,
+          lng: 12.4693,
+          description: "Trattoria popular en Trastevere. Pasta fresca y terraza",
+          time: "20:00",
+          category: "comida",
+          optional: true
+        },
+        {
+          id: "trattoria-pennestri",
+          name: "Trattoria Pennestri",
+          lat: 41.8733,
+          lng: 12.4799,
+          description: "Cocina romana moderna en Ostiense. Reservar",
+          time: "20:00",
+          category: "comida",
+          optional: true
         }
       ]
     },

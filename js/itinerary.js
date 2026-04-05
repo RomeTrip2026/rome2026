@@ -98,13 +98,18 @@ const Itinerary = (() => {
       const sorted = [...filtered].sort((a, b) => {
         const aV = visitedSet.has(a.id) ? 1 : 0;
         const bV = visitedSet.has(b.id) ? 1 : 0;
-        return aV - bV;
+        if (aV !== bV) return aV - bV;
+        // Optionals after regulars
+        const aO = a.optional ? 1 : 0;
+        const bO = b.optional ? 1 : 0;
+        return aO - bO;
       });
 
       sorted.forEach((place) => {
         const visited = visitedSet.has(place.id);
+        const isOpt = place.optional;
         const item = document.createElement("div");
-        item.className = `place-item${visited ? " visited" : ""}`;
+        item.className = `place-item${visited ? " visited" : ""}${isOpt ? " optional" : ""}`;
         item.innerHTML = `
           <input type="checkbox" class="place-check" data-id="${place.id}"
                  ${visited ? "checked" : ""} style="border-color:${visited ? "" : day.color}">
@@ -117,7 +122,7 @@ const Itinerary = (() => {
             </svg>
           </button>
           <div class="place-info" data-lng="${place.lng}" data-lat="${place.lat}">
-            <div class="place-name">${place.name}</div>
+            <div class="place-name">${place.name}${isOpt ? '<span class="optional-tag">opcional</span>' : ""}</div>
             <div class="place-time">${place.time}</div>
           </div>
           <button class="route-btn" data-lat="${place.lat}" data-lng="${place.lng}" data-name="${place.name}" aria-label="Ruta a ${place.name}">

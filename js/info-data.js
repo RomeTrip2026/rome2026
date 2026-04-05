@@ -356,6 +356,128 @@ const PLACE_INFO = {
   }
 };
 
+  // ── Opcionales ──
+
+  "campo-de-fiori": {
+    title: "Campo de' Fiori",
+    html: `
+      <p>Una de las plazas más vibrantes de Roma, <strong>Campo de' Fiori</strong> alberga un mercado diario desde 1869. Cada mañana se llena de puestos con frutas, verduras, especias, flores y productos típicos italianos. Es el único gran mercado al aire libre que queda en el centro histórico.</p>
+      <p>En el centro se levanta la estatua de <strong>Giordano Bruno</strong>, filósofo quemado en la hoguera en este mismo lugar en 1600 por la Inquisición. Por las noches la plaza se transforma en zona de bares y restaurantes.</p>
+      <h3>Tips</h3>
+      <p>El mercado funciona de lunes a sábado, de 7:00 a 14:00 aprox. Los domingos no hay mercado. Ideal para comprar especias, pasta seca o aceite de oliva como souvenirs.</p>
+    `
+  },
+
+  "jardin-naranjos": {
+    title: "Jardín de los Naranjos",
+    html: `
+      <p>El <strong>Giardino degli Aranci</strong> (Parco Savello) es un pequeño parque en la colina del Aventino, plantado con naranjos amargos. Ocupa el terreno de una antigua fortaleza del siglo XIII de la familia Savelli.</p>
+      <p>Desde su terraza se obtiene una de las <strong>mejores vistas panorámicas de Roma</strong>: el Tíber, Trastevere, la cúpula de San Pedro y el perfil de la ciudad al atardecer. Es un lugar tranquilo y romántico, alejado del bullicio turístico.</p>
+      <h3>Tips</h3>
+      <p>Entrada gratuita. Abre de 7:00 a atardecer. Ideal combinar con el Ojo de la Cerradura y Santa Sabina, que están a pocos metros. Llevar algo para beber y disfrutar la vista.</p>
+    `
+  },
+
+  "ojo-cerradura": {
+    title: "Ojo de la Cerradura de los Caballeros de Malta",
+    html: `
+      <p>En la <strong>Piazza dei Cavalieri di Malta</strong>, en la puerta del priorato de la Orden de Malta, hay una cerradura que ofrece una vista única: al mirar a través de ella se ve la <strong>cúpula de San Pedro perfectamente enmarcada</strong> al final de un túnel de vegetación.</p>
+      <p>La plaza fue diseñada por <strong>Piranesi</strong> en el siglo XVIII y es territorio soberano de la Orden de Malta, un microestado reconocido internacionalmente. Es uno de los secretos peor guardados de Roma.</p>
+      <h3>Tips</h3>
+      <p>Gratuito y accesible las 24 horas. Puede haber cola breve. Está junto al Jardín de los Naranjos en el Aventino.</p>
+    `
+  },
+
+  "santa-sabina": {
+    title: "Basílica de Santa Sabina",
+    html: `
+      <p>Construida entre 422 y 432 d.C., <strong>Santa Sabina</strong> es una de las iglesias paleocristianas mejor conservadas de Roma. Su interior de columnas corintias de mármol y amplios ventanales transmite una serenidad única.</p>
+      <p>Destaca su <strong>puerta de madera de ciprés</strong> del siglo V, una de las más antiguas que existen, con paneles tallados que incluyen una de las primeras representaciones conocidas de la Crucifixión. El convento adjunto pertenece a los dominicos desde 1222 — aquí vivió Santo Domingo de Guzmán.</p>
+      <h3>Tips</h3>
+      <p>Entrada gratuita. Abierta de 6:15 a 12:00 y 15:30 a 18:00. Ambiente muy tranquilo. Combinar con el Jardín de los Naranjos.</p>
+    `
+  },
+
+  "pasticceria-regoli": {
+    title: "Pasticceria Regoli",
+    html: `
+      <p>Fundada en 1916, <strong>Pasticceria Regoli</strong> es una institución del barrio Esquilino. Es famosa por su <strong>maritozzo con panna</strong>: un bollo suave relleno de crema batida, el desayuno romano por excelencia.</p>
+      <p>La pastelería mantiene su decoración clásica y ofrece también cornetti, pasteles, tartas y café. Es frecuentada por romanos que vienen desde todos los barrios especialmente por los maritozzi.</p>
+      <h3>Tips</h3>
+      <p>Ir temprano en la mañana para los maritozzi más frescos. Precio muy accesible. Cerca de la estación Termini.</p>
+    `
+  },
+
+  "fatamorgana": {
+    title: "Fatamorgana",
+    html: `
+      <p><strong>Fatamorgana</strong> es una heladería artesanal fundada en 2003 que revolucionó el gelato en Roma. Todos sus helados son <strong>sin gluten, sin colorantes artificiales y sin emulsificantes</strong>. Utilizan ingredientes naturales y combinaciones creativas.</p>
+      <p>Tienen sabores únicos como <strong>chocolate con wasabi</strong>, <strong>pera y gorgonzola</strong>, o <strong>Kentucky</strong> (tabaco y canela). Tienen varias sedes en Roma; la de Monti es una de las más accesibles.</p>
+      <h3>Tips</h3>
+      <p>Probar los sabores más atrevidos — es lo que los distingue. Buen tamaño de porciones. Precios normales para helado artesanal.</p>
+    `
+  },
+
+  "san-clemente": {
+    title: "Basílica de San Clemente",
+    html: `
+      <p>Una de las iglesias más fascinantes de Roma por sus <strong>tres niveles arqueológicos</strong>. La basílica actual (siglo XII) tiene mosaicos espectaculares. Debajo hay una <strong>iglesia del siglo IV</strong>, y más abajo aún, edificios romanos del siglo I incluyendo un <strong>templo de Mitra</strong>.</p>
+      <p>Es como descender a través de 2.000 años de historia. Administrada por los dominicos irlandeses desde 1667. Los frescos medievales del nivel inferior son excepcionales y contienen una de las primeras inscripciones en italiano vulgar.</p>
+      <h3>Tips</h3>
+      <p>Entrada a la basílica superior gratuita. Excavaciones subterráneas: €10. Abierta 9:00-12:30 y 15:00-18:00. A 5 minutos caminando del Coliseo. Imprescindible.</p>
+    `
+  },
+
+  "mordi-e-vai": {
+    title: "Mordi e Vai",
+    html: `
+      <p><strong>Mordi e Vai</strong> es el puesto número 15 del Mercato Testaccio, considerado uno de los mejores street food de Roma. Sergio, el dueño, prepara sándwiches con recetas de la cocina romana tradicional: <strong>trippa, bollito, picchiapò</strong> (carne guisada) y más.</p>
+      <p>El Mercato Testaccio es un mercado cubierto moderno que reemplazó al antiguo mercado del barrio obrero. Testaccio es el barrio más auténticamente romano de la ciudad, cuna de la cocina del "quinto cuarto".</p>
+      <h3>Tips</h3>
+      <p>Abierto de lunes a sábado hasta las 15:00. Probar el sándwich de bollito con salsa verde. Precios muy accesibles (€4-6). Comer de pie en el mercado.</p>
+    `
+  },
+
+  "da-remo": {
+    title: "Da Remo",
+    html: `
+      <p><strong>Da Remo</strong> es la pizzería más popular de Testaccio y un clásico absoluto de Roma. Sirve <strong>pizza romana</strong> con masa fina y crujiente, cocinada en horno de leña. El ambiente es ruidoso, caótico y auténticamente romano.</p>
+      <p>Funciona desde los años 50 y es frecuentada casi exclusivamente por locales. Las mesas al aire libre en Piazza Santa Maria Liberatrice son ideales en las noches de primavera.</p>
+      <h3>Tips</h3>
+      <p>Solo abre para cena (18:30-01:00). No acepta reservas. Llegar antes de las 20:00 para evitar cola. Solo efectivo. Pizza muy económica.</p>
+    `
+  },
+
+  "flavio-velavevodetto": {
+    title: "Flavio al Velavevodetto",
+    html: `
+      <p>Trattoria excavada literalmente en el <strong>Monte Testaccio</strong>, una colina artificial de 35 metros formada por fragmentos de ánforas romanas acumulados durante siglos. Las paredes del restaurante muestran los restos de cerámica incrustados.</p>
+      <p>Sirve cocina romana tradicional de altísimo nivel: <strong>cacio e pepe, amatriciana, carbonara</strong> y platos del quinto cuarto. Excelente relación calidad-precio para la calidad que ofrece.</p>
+      <h3>Tips</h3>
+      <p>Reservar con antelación, especialmente para cena. Pedir la cacio e pepe y la carbonara. Terraza agradable. Precios moderados para Roma.</p>
+    `
+  },
+
+  "tonnarello": {
+    title: "Tonnarello",
+    html: `
+      <p><strong>Tonnarello</strong> es una trattoria muy popular en el corazón de Trastevere, en la pintoresca Piazza de' Renzi. Conocida por su <strong>pasta fresca hecha en casa</strong>, especialmente los tonnarelli cacio e pepe que le dan nombre al local.</p>
+      <p>La terraza exterior en la plaza empedrada es uno de los escenarios más encantadores para cenar en Roma. Trastevere es el barrio bohemio por excelencia, con calles estrechas y ambiente nocturno animado.</p>
+      <h3>Tips</h3>
+      <p>Muy popular — llegar temprano o reservar. Pedir los tonnarelli cacio e pepe o la amatriciana. Buena carta de vinos. Precios razonables para la zona.</p>
+    `
+  },
+
+  "trattoria-pennestri": {
+    title: "Trattoria Pennestri",
+    html: `
+      <p><strong>Trattoria Pennestri</strong> está en el barrio de Ostiense, una zona emergente de Roma lejos del circuito turístico. Ofrece <strong>cocina romana moderna</strong> con ingredientes de temporada y técnicas contemporáneas, sin perder la esencia de la tradición.</p>
+      <p>El chef trabaja con productores locales y el menú cambia frecuentemente. El ambiente es informal pero cuidado, con una barra donde se puede comer viendo la cocina abierta. Ostiense alberga también el arte callejero más interesante de Roma.</p>
+      <h3>Tips</h3>
+      <p>Reservar con antelación. Menú degustación excelente. Buena carta de vinos naturales. Algo alejado del centro — tomar metro línea B hasta Garbatella.</p>
+    `
+  },
+
 // Map duplicate day-specific IDs to shared content
 (function() {
   const aliases = {

@@ -182,8 +182,26 @@ const MapModule = (() => {
     });
   }
 
+  function lightenColor(hex, amount) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    const lr = Math.min(255, r + Math.round((255 - r) * amount));
+    const lg = Math.min(255, g + Math.round((255 - g) * amount));
+    const lb = Math.min(255, b + Math.round((255 - b) * amount));
+    return `#${lr.toString(16).padStart(2,"0")}${lg.toString(16).padStart(2,"0")}${lb.toString(16).padStart(2,"0")}`;
+  }
+
   function makeFeature(place, dayColor, dayIndex, visited, dimmed) {
-    const color = (dimmed || visited) ? "#9E9E9E" : dayColor;
+    const isOptional = place.optional;
+    let color;
+    if (dimmed || visited) {
+      color = "#9E9E9E";
+    } else if (isOptional) {
+      color = lightenColor(dayColor, 0.45);
+    } else {
+      color = dayColor;
+    }
     const markerImage = ensureMarkerImage(color, place.category);
     return {
       type: "Feature",
