@@ -116,7 +116,7 @@ const Itinerary = (() => {
               <line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
           </button>
-          <div class="place-info">
+          <div class="place-info" data-lng="${place.lng}" data-lat="${place.lat}">
             <div class="place-name">${place.name}</div>
             <div class="place-time">${place.time}</div>
           </div>
@@ -143,6 +143,14 @@ const Itinerary = (() => {
     list.querySelectorAll(".info-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         App.showInfo(btn.dataset.placeId);
+      });
+    });
+
+    list.querySelectorAll(".place-info").forEach((el) => {
+      el.addEventListener("click", () => {
+        const lng = parseFloat(el.dataset.lng);
+        const lat = parseFloat(el.dataset.lat);
+        MapModule.flyTo(lng, lat);
       });
     });
 

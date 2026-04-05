@@ -356,6 +356,7 @@ html, body {
 .place-info {
   flex: 1;
   min-width: 0;
+  cursor: pointer;
 }
 
 .place-name {
