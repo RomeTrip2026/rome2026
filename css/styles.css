@@ -50,12 +50,12 @@ html, body {
   background: #fff;
   border: none;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   cursor: pointer;
   z-index: 5;
   color: #333;
@@ -67,7 +67,7 @@ html, body {
 }
 
 #geolocate-btn {
-  bottom: 148px;
+  bottom: calc(88px + var(--safe-bottom) + 56px + 12px);
 }
 
 /* ── FAB ── */
