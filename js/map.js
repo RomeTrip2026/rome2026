@@ -90,9 +90,6 @@ const MapModule = (() => {
         data: { type: "FeatureCollection", features },
       });
 
-      // Fit to all places on load
-      fitToPlaces();
-
       // White border circle
       map.addLayer({
         id: "places-border",
@@ -148,6 +145,9 @@ const MapModule = (() => {
       map.on("mouseleave", "places-circle", () => {
         map.getCanvas().style.cursor = "";
       });
+
+      // Fit to all places after everything is set up
+      fitToPlaces();
     });
   }
 
@@ -220,7 +220,7 @@ const MapModule = (() => {
       (b, c) => b.extend(c),
       new mapboxgl.LngLatBounds(coords[0], coords[0])
     );
-    map.fitBounds(bounds, { padding: 50, duration: 600, maxZoom: 16 });
+    map.fitBounds(bounds, { padding: 30, duration: 500, maxZoom: 16 });
   }
 
   function rebuildSource(visitedSet, activeDayIndex, activeCategory) {
