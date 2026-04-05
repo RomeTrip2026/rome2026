@@ -42,7 +42,7 @@ const App = (() => {
 
       const route = await MapModule.fetchRoute(pos.lng, pos.lat, lng, lat);
       MapModule.drawRoute(route.coordinates);
-      info.textContent = `🚶 ${route.duration} min · ${route.distance} km hasta ${name}`;
+      info.textContent = `${route.duration} min · ${route.distance} km hasta ${name}`;
 
       // Close panel on mobile to show route
       if (Itinerary.isOpen() && window.innerWidth < 768) {
