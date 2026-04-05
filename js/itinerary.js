@@ -96,10 +96,6 @@ const Itinerary = (() => {
       if (filtered.length === 0) return;
 
       const sorted = [...filtered].sort((a, b) => {
-        const aV = visitedSet.has(a.id) ? 1 : 0;
-        const bV = visitedSet.has(b.id) ? 1 : 0;
-        if (aV !== bV) return aV - bV;
-        // Sort by time
         return a.time.localeCompare(b.time);
       });
 
