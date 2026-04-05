@@ -122,7 +122,7 @@ const Itinerary = (() => {
           </div>
           <button class="route-btn" data-lat="${place.lat}" data-lng="${place.lng}" data-name="${place.name}" aria-label="Ruta a ${place.name}">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 18l6-6-6-6"/>
+              <path d="M8 20v-8a4 4 0 0 1 4-4h4"/><path d="M13 4l4 4-4 4"/>
             </svg>
           </button>
         `;
