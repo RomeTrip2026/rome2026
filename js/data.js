@@ -2,40 +2,6 @@ const TRIP_DATA = {
   tripName: "Roma 2026",
   days: [
     {
-      date: "2026-04-04",
-      label: "4 Abr — Test Santiago",
-      color: "#E91E63",
-      places: [
-        {
-          id: "calma-fredes",
-          name: "La Calma by Fredes",
-          lat: -33.399834,
-          lng: -70.598270,
-          description: "Restaurante de pescados y mariscos frescos en Vitacura",
-          time: "13:00",
-          category: "comida"
-        },
-        {
-          id: "puelo-cafe",
-          name: "Puelo Café",
-          lat: -33.406723,
-          lng: -70.598465,
-          description: "Specialty coffee en Las Catalpas, Vitacura",
-          time: "10:00",
-          category: "cafe"
-        },
-        {
-          id: "plaza-italia-stgo",
-          name: "Plaza Italia",
-          lat: -33.436944,
-          lng: -70.634449,
-          description: "Plaza Baquedano / Plaza Italia",
-          time: "16:00",
-          category: "landmark"
-        }
-      ]
-    },
-    {
       date: "2026-04-07",
       label: "7 Abr — Centro Histórico",
       color: "#FF5733",
