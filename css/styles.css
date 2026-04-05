@@ -38,6 +38,11 @@ html, body {
   display: none;
 }
 
+/* Hide native geolocate button (we keep our own); the blue dot is a map layer, unaffected */
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-group:has(.mapboxgl-ctrl-geolocate) {
+  display: none !important;
+}
+
 /* ── Map buttons ── */
 .map-btn {
   position: absolute;

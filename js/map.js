@@ -92,7 +92,17 @@ const MapModule = (() => {
 
     map.addControl(new mapboxgl.AttributionControl({ compact: true }));
 
+    // Live GPS dot
+    const geoControl = new mapboxgl.GeolocateControl({
+      positionOptions: { enableHighAccuracy: true },
+      trackUserLocation: true,
+      showUserHeading: true,
+    });
+    map.addControl(geoControl);
+
+    // Auto-activate GPS tracking once map loads
     map.on("load", () => {
+      geoControl.trigger();
       map.addSource("route", {
         type: "geojson",
         data: { type: "Feature", geometry: { type: "LineString", coordinates: [] } },
