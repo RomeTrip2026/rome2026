@@ -316,7 +316,7 @@ const MapModule = (() => {
       const offsetPx = mapH / 2 - visibleH * 0.2;
       // Use project/unproject at current zoom to compute shifted center
       const targetPoint = map.project([lng, lat]);
-      targetPoint.y -= offsetPx;
+      targetPoint.y += offsetPx;
       const shifted = map.unproject(targetPoint);
       map.flyTo({ center: shifted, duration: 800 });
     } else {
