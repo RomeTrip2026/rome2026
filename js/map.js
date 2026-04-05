@@ -304,17 +304,28 @@ const MapModule = (() => {
   }
 
   function flyTo(lng, lat) {
-    // If panel is open on mobile, offset so the point lands in visible map area
     const panel = document.getElementById("panel");
-    let padding = {};
     if (panel && panel.classList.contains("open") && window.innerWidth < 768) {
       const panelH = panel.getBoundingClientRect().height;
       const mapH = map.getContainer().clientHeight;
       const visibleH = mapH - panelH;
-      // Place the point at ~1/5 from top of visible area → pad top small, pad bottom = panelH + extra
-      padding = { top: visibleH * 0.2, bottom: panelH + visibleH * 0.2 };
+      // We want the point at ~20% from top of visible area.
+      // The map center is at mapH/2 (in pixels from top).
+      // The point should be at visibleH * 0.2 from top.
+      // So the center needs to shift down by (mapH/2 - visibleH*0.2) pixels.
+      const offsetPx = mapH / 2 - visibleH * 0.2;
+      // Convert pixel offset to lat degrees at zoom 15
+      // At zoom z, 1 degree lat ≈ 256 * 2^z / 360 pixels (approx at equator, good enough)
+      // But we need the inverse: 1 pixel ≈ 360 / (256 * 2^z) degrees
+      // For more accuracy we use Mercator math, but for this offset a simpler approach:
+      // Use map's own projection by temporarily setting zoom and measuring
+      const zoom = 15;
+      const degPerPx = 360 / (256 * Math.pow(2, zoom)) / Math.cos(lat * Math.PI / 180);
+      const latOffset = offsetPx * degPerPx;
+      map.flyTo({ center: [lng, lat - latOffset], zoom, duration: 800 });
+    } else {
+      map.flyTo({ center: [lng, lat], zoom: 15, duration: 800 });
     }
-    map.flyTo({ center: [lng, lat], zoom: 15, duration: 800, padding });
   }
 
   function geolocate() {
