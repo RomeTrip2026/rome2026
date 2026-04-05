@@ -353,8 +353,7 @@ const PLACE_INFO = {
       <h3>Tips</h3>
       <p>Buscar la entrada en Via dei Capocci en Monti — no hay cartel obvio. Cócteles a €12–15. Abierto de 7 PM a 2 AM, cerrado lunes. Sin reservas — llegar y sentarse. El público es mixto: locales y visitantes informados. Perfecto como parada nocturna después de cenar en Monti. Combina bien con un trago previo en Ai Tre Scalini.</p>
     `
-  }
-};
+  },
 
   // ── Opcionales ──
 
@@ -476,7 +475,8 @@ const PLACE_INFO = {
       <h3>Tips</h3>
       <p>Reservar con antelación. Menú degustación excelente. Buena carta de vinos naturales. Algo alejado del centro — tomar metro línea B hasta Garbatella.</p>
     `
-  },
+  }
+};
 
 // Map duplicate day-specific IDs to shared content
 (function() {
