@@ -306,19 +306,21 @@ const MapModule = (() => {
   function flyTo(lng, lat) {
     const panel = document.getElementById("panel");
     if (panel && panel.classList.contains("open") && window.innerWidth < 768) {
-      // Place the point in the visible area above the panel
       const panelH = panel.getBoundingClientRect().height;
       const mapH = map.getContainer().clientHeight;
       const visibleH = mapH - panelH;
-      // Target: point at 20% from top of visible area → pixel Y = visibleH * 0.2
-      // Map center is at pixel Y = mapH / 2
-      // Offset in pixels (positive = shift center down in screen)
-      const offsetPx = mapH / 2 - visibleH * 0.2;
-      // Use project/unproject at current zoom to compute shifted center
-      const targetPoint = map.project([lng, lat]);
-      targetPoint.y += offsetPx;
-      const shifted = map.unproject(targetPoint);
-      map.flyTo({ center: shifted, duration: 800 });
+      // Visible center Y from top = visibleH / 2
+      // We want the point a bit higher: at visibleH * 0.35 from top
+      // Map center is at mapH / 2 from top
+      // So desired screen Y for the point = visibleH * 0.35
+      // Map center screen Y = mapH / 2
+      // offset = [dx, dy] shifts the center: positive dy moves center down on screen
+      // which means the point moves UP on screen
+      // We want point at visibleH*0.35, it would normally be at mapH/2
+      // So we need to move it up by (mapH/2 - visibleH*0.35) pixels
+      // That means offset dy = (mapH/2 - visibleH*0.35)
+      const dy = mapH / 2 - visibleH * 0.35;
+      map.flyTo({ center: [lng, lat], duration: 800, offset: [0, -dy] });
     } else {
       map.flyTo({ center: [lng, lat], zoom: 15, duration: 800 });
     }
