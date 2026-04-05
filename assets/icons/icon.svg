@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FADADD"/>
+      <stop offset="100%" stop-color="#B5EAD7"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+  <!-- Colosseum simplified -->
+  <g transform="translate(256,270)" stroke="#6B5B73" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Base -->
+    <ellipse cx="0" cy="60" rx="140" ry="28" fill="#F6E6CB" stroke="#6B5B73"/>
+    <!-- Outer wall -->
+    <path d="M-130,50 L-130,-40 Q-130,-80 -100,-100 Q-50,-130 0,-130 Q50,-130 100,-100 Q130,-80 130,-40 L130,50" fill="#F6E6CB"/>
+    <!-- Top arch row -->
+    <path d="M-100,-90 A12,16 0 0,1 -76,-90" />
+    <path d="M-62,-100 A12,16 0 0,1 -38,-100" />
+    <path d="M-24,-105 A12,16 0 0,1 0,-105" />
+    <path d="M0,-105 A12,16 0 0,1 24,-105" />
+    <path d="M38,-100 A12,16 0 0,1 62,-100" />
+    <path d="M76,-90 A12,16 0 0,1 100,-90" />
+    <!-- Middle arch row -->
+    <path d="M-120,-40 A14,20 0 0,1 -92,-40" />
+    <path d="M-82,-48 A14,20 0 0,1 -54,-48" />
+    <path d="M-44,-52 A14,20 0 0,1 -16,-52" />
+    <path d="M-6,-53 A14,20 0 0,1 22,-53" />
+    <path d="M32,-52 A14,20 0 0,1 60,-52" />
+    <path d="M70,-48 A14,20 0 0,1 98,-48" />
+    <path d="M108,-40 A14,20 0 0,1 130,-40" />
+    <!-- Bottom arch row -->
+    <path d="M-128,10 A16,24 0 0,1 -96,10" />
+    <path d="M-86,6 A16,24 0 0,1 -54,6" />
+    <path d="M-44,4 A16,24 0 0,1 -12,4" />
+    <path d="M-2,3 A16,24 0 0,1 30,3" />
+    <path d="M40,4 A16,24 0 0,1 72,4" />
+    <path d="M82,6 A16,24 0 0,1 114,6" />
+    <!-- Broken right side -->
+    <path d="M110,-70 L120,-50 L125,-20 L128,10" stroke="#6B5B73" stroke-width="6" fill="none"/>
+  </g>
+</svg>
