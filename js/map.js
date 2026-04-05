@@ -5,39 +5,79 @@ const MapModule = (() => {
   let routeLayerAdded = false;
   let visitedSetRef = new Set();
 
-  // SVG paths for each category icon (white stroke on transparent)
+  // SVG templates for category icons (white stroke, no background)
   const ICON_SVGS = {
-    landmark: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>`,
-    comida: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
-    cafe: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>`,
-    helado: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22L8 12h8z"/><path d="M12 12a5 5 0 0 1-5-5 5 5 0 0 1 10 0 5 5 0 0 1-5 5z"/><path d="M7.5 7a2.5 2.5 0 0 1 5 0"/><path d="M11.5 7a2.5 2.5 0 0 1 5 0"/></svg>`,
-    tragos: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M19 3l-7 8-7-8z"/></svg>`,
+    landmark: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>`,
+    comida: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
+    cafe: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>`,
+    helado: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22L8 12h8z"/><path d="M12 12a5 5 0 0 1-5-5 5 5 0 0 1 10 0 5 5 0 0 1-5 5z"/><path d="M7.5 7a2.5 2.5 0 0 1 5 0"/><path d="M11.5 7a2.5 2.5 0 0 1 5 0"/></svg>`,
+    tragos: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M19 3l-7 8-7-8z"/></svg>`,
   };
 
-  function loadCategoryIcons() {
-    const size = 24;
-    const ratio = window.devicePixelRatio || 1;
-    const promises = Object.entries(ICON_SVGS).map(([category, svg]) => {
+  // Cache of loaded SVG icon Image objects
+  const iconImageCache = {};
+
+  function loadIconImages() {
+    const promises = Object.entries(ICON_SVGS).map(([cat, svg]) => {
       return new Promise((resolve) => {
         const img = new Image();
         const blob = new Blob([svg], { type: "image/svg+xml" });
         const url = URL.createObjectURL(blob);
         img.onload = () => {
-          const canvas = document.createElement("canvas");
-          canvas.width = size * ratio;
-          canvas.height = size * ratio;
-          const ctx = canvas.getContext("2d");
-          ctx.drawImage(img, 0, 0, size * ratio, size * ratio);
           URL.revokeObjectURL(url);
-          map.addImage(`icon-${category}`, ctx.getImageData(0, 0, size * ratio, size * ratio), {
-            pixelRatio: ratio,
-          });
+          iconImageCache[cat] = img;
           resolve();
         };
         img.src = url;
       });
     });
     return Promise.all(promises);
+  }
+
+  // Generate a composite marker image: white border circle + colored circle + icon
+  function generateMarkerImage(color, category) {
+    const ratio = window.devicePixelRatio || 1;
+    const size = 32; // logical pixels
+    const px = size * ratio;
+    const canvas = document.createElement("canvas");
+    canvas.width = px;
+    canvas.height = px;
+    const ctx = canvas.getContext("2d");
+    const cx = px / 2;
+    const cy = px / 2;
+    const outerR = px / 2 - 1;
+    const innerR = outerR - 3 * ratio;
+
+    // White border
+    ctx.beginPath();
+    ctx.arc(cx, cy, outerR, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffffff";
+    ctx.fill();
+
+    // Colored fill
+    ctx.beginPath();
+    ctx.arc(cx, cy, innerR, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+    // Icon centered
+    const iconImg = iconImageCache[category];
+    if (iconImg) {
+      const iconSize = innerR * 1.3;
+      ctx.drawImage(iconImg, cx - iconSize / 2, cy - iconSize / 2, iconSize, iconSize);
+    }
+
+    return { data: ctx.getImageData(0, 0, px, px), ratio };
+  }
+
+  // Ensure a marker image exists for this color+category combo
+  function ensureMarkerImage(color, category) {
+    const key = `marker-${color}-${category}`;
+    if (!map.hasImage(key)) {
+      const { data, ratio } = generateMarkerImage(color, category);
+      map.addImage(key, data, { pixelRatio: ratio });
+    }
+    return key;
   }
 
   function init(token) {
@@ -72,56 +112,36 @@ const MapModule = (() => {
 
   function addMarkers(days, visitedSet) {
     visitedSetRef = visitedSet;
-    const features = [];
 
     days.forEach((day, dayIdx) => {
       day.places.forEach((place) => {
         placesIndex[place.id] = { place, color: day.color, dayIndex: dayIdx };
-        const visited = visitedSet.has(place.id);
-        features.push(makeFeature(place, day.color, dayIdx, visited, false));
       });
     });
 
     map.on("load", async () => {
-      await loadCategoryIcons();
+      await loadIconImages();
+
+      // Generate initial features (this also creates marker images)
+      const features = [];
+      Object.values(placesIndex).forEach(({ place, color, dayIndex }) => {
+        const visited = visitedSet.has(place.id);
+        features.push(makeFeature(place, color, dayIndex, visited, false));
+      });
 
       map.addSource("places", {
         type: "geojson",
         data: { type: "FeatureCollection", features },
       });
 
-      // White border circle
+      // Single symbol layer — each feature carries its own composite image
       map.addLayer({
-        id: "places-border",
-        type: "circle",
-        source: "places",
-        paint: {
-          "circle-radius": 16,
-          "circle-color": "#ffffff",
-          "circle-opacity": ["get", "opacity"],
-        },
-      });
-
-      // Colored circle
-      map.addLayer({
-        id: "places-circle",
-        type: "circle",
-        source: "places",
-        paint: {
-          "circle-radius": 13,
-          "circle-color": ["get", "color"],
-          "circle-opacity": ["get", "opacity"],
-        },
-      });
-
-      // Category icon on top
-      map.addLayer({
-        id: "places-icon",
+        id: "places-symbols",
         type: "symbol",
         source: "places",
         layout: {
-          "icon-image": ["get", "icon"],
-          "icon-size": 0.6,
+          "icon-image": ["get", "markerImage"],
+          "icon-size": 1,
           "icon-allow-overlap": true,
           "icon-ignore-placement": true,
         },
@@ -130,28 +150,25 @@ const MapModule = (() => {
         },
       });
 
-      map.on("click", "places-circle", (e) => {
-        const props = e.features[0].properties;
-        showPopup(props, visitedSetRef);
-      });
-      map.on("click", "places-icon", (e) => {
+      map.on("click", "places-symbols", (e) => {
         const props = e.features[0].properties;
         showPopup(props, visitedSetRef);
       });
 
-      map.on("mouseenter", "places-circle", () => {
+      map.on("mouseenter", "places-symbols", () => {
         map.getCanvas().style.cursor = "pointer";
       });
-      map.on("mouseleave", "places-circle", () => {
+      map.on("mouseleave", "places-symbols", () => {
         map.getCanvas().style.cursor = "";
       });
 
-      // Fit to all places after everything is set up
       fitToPlaces();
     });
   }
 
   function makeFeature(place, dayColor, dayIndex, visited, dimmed) {
+    const color = (dimmed || visited) ? "#9E9E9E" : dayColor;
+    const markerImage = ensureMarkerImage(color, place.category);
     return {
       type: "Feature",
       geometry: { type: "Point", coordinates: [place.lng, place.lat] },
@@ -161,9 +178,9 @@ const MapModule = (() => {
         description: place.description,
         time: place.time,
         dayIndex,
-        color: (dimmed || visited) ? "#9E9E9E" : dayColor,
+        color,
         opacity: dimmed ? 0.2 : visited ? 0.55 : 1,
-        icon: `icon-${place.category}`,
+        markerImage,
       },
     };
   }
