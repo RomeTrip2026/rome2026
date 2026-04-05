@@ -99,10 +99,8 @@ const Itinerary = (() => {
         const aV = visitedSet.has(a.id) ? 1 : 0;
         const bV = visitedSet.has(b.id) ? 1 : 0;
         if (aV !== bV) return aV - bV;
-        // Optionals after regulars
-        const aO = a.optional ? 1 : 0;
-        const bO = b.optional ? 1 : 0;
-        return aO - bO;
+        // Sort by time
+        return a.time.localeCompare(b.time);
       });
 
       sorted.forEach((place) => {

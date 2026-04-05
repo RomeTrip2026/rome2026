@@ -385,7 +385,7 @@ html, body {
 }
 
 .place-item.optional {
-  opacity: 0.55;
+  opacity: 1;
 }
 
 .optional-tag {
