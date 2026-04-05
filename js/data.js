@@ -192,6 +192,15 @@ const TRIP_DATA = {
         },
         // Comida
         {
+          id: "pizzarium",
+          name: "Pizzarium",
+          lat: 41.9072,
+          lng: 12.4504,
+          description: "La mejor pizza al taglio de Roma (zona Vaticano) 🎯 Diego's tip",
+          time: "13:00",
+          category: "comida"
+        },
+        {
           id: "osteria-dell-angelo",
           name: "Osteria dell'Angelo",
           lat: 41.9073,
@@ -400,15 +409,6 @@ const TRIP_DATA = {
           category: "landmark"
         },
         // Comida
-        {
-          id: "pizzarium",
-          name: "Pizzarium",
-          lat: 41.9072,
-          lng: 12.4504,
-          description: "La mejor pizza al taglio de Roma (zona Vaticano) 🎯 Diego's tip",
-          time: "13:00",
-          category: "comida"
-        },
         {
           id: "forno-campo-fiori",
           name: "Forno Campo de' Fiori",
