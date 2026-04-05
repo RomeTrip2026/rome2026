@@ -163,6 +163,16 @@ const TRIP_DATA = {
           time: "09:00",
           category: "landmark",
           optional: true
+        },
+        {
+          id: "forno-campo-fiori",
+          name: "Forno Campo de' Fiori",
+          lat: 41.8956,
+          lng: 12.4720,
+          description: "Pizza bianca legendaria 🎯 Diego's tip",
+          time: "13:00",
+          category: "comida",
+          optional: true
         }
       ]
     },
@@ -303,6 +313,15 @@ const TRIP_DATA = {
           time: "15:00",
           category: "cafe"
         },
+        {
+          id: "faro-coffee",
+          name: "Faro",
+          lat: 41.8967,
+          lng: 12.4770,
+          description: "Specialty coffee. De los mejores de Roma",
+          time: "09:00",
+          category: "cafe"
+        },
         // Tragos
         {
           id: "terrazza-borromini",
@@ -342,46 +361,6 @@ const TRIP_DATA = {
         },
         // Opcionales
         {
-          id: "jardin-naranjos",
-          name: "Jardín de los Naranjos",
-          lat: 41.8854,
-          lng: 12.4799,
-          description: "Giardino degli Aranci. Mirador con vista panorámica al Tíber",
-          time: "17:00",
-          category: "landmark",
-          optional: true
-        },
-        {
-          id: "ojo-cerradura",
-          name: "Ojo de la Cerradura",
-          lat: 41.8829,
-          lng: 12.4784,
-          description: "Buco della Serratura — vista perfecta del domo de San Pedro por la cerradura",
-          time: "17:15",
-          category: "landmark",
-          optional: true
-        },
-        {
-          id: "santa-sabina",
-          name: "Basílica Santa Sabina",
-          lat: 41.8840,
-          lng: 12.4745,
-          description: "Basílica paleocristiana del siglo V en el Aventino",
-          time: "17:30",
-          category: "landmark",
-          optional: true
-        },
-        {
-          id: "pasticceria-regoli",
-          name: "Pasticceria Regoli",
-          lat: 41.8948,
-          lng: 12.5009,
-          description: "Pastelería histórica. Famosa por su maritozzo",
-          time: "15:30",
-          category: "cafe",
-          optional: true
-        },
-        {
           id: "fatamorgana",
           name: "Fatamorgana",
           lat: 41.8956,
@@ -408,16 +387,6 @@ const TRIP_DATA = {
           time: "09:00",
           category: "landmark"
         },
-        // Comida
-        {
-          id: "forno-campo-fiori",
-          name: "Forno Campo de' Fiori",
-          lat: 41.8956,
-          lng: 12.4720,
-          description: "Pizza bianca legendaria (mejor ir el día 7) 🎯 Diego's tip",
-          time: "13:00",
-          category: "comida"
-        },
         // Tragos
         {
           id: "ai-tre-scalini-d4",
@@ -435,6 +404,15 @@ const TRIP_DATA = {
           lng: 12.4930,
           description: "Cocktail bar de diseño en Monti",
           time: "21:00",
+          category: "tragos"
+        },
+        {
+          id: "blackmarket-hall",
+          name: "Blackmarket Hall",
+          lat: 41.8950,
+          lng: 12.4923,
+          description: "Speakeasy en Monti. Cócteles creativos",
+          time: "22:00",
           category: "tragos"
         },
         // Opcionales
@@ -477,6 +455,46 @@ const TRIP_DATA = {
           time: "20:00",
           category: "comida",
           optional: true
+        },
+        {
+          id: "jardin-naranjos",
+          name: "Jardín de los Naranjos",
+          lat: 41.8854,
+          lng: 12.4799,
+          description: "Giardino degli Aranci. Mirador con vista panorámica al Tíber",
+          time: "17:00",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "ojo-cerradura",
+          name: "Ojo de la Cerradura",
+          lat: 41.8829,
+          lng: 12.4784,
+          description: "Buco della Serratura — vista perfecta del domo de San Pedro por la cerradura",
+          time: "17:15",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "santa-sabina",
+          name: "Basílica Santa Sabina",
+          lat: 41.8840,
+          lng: 12.4745,
+          description: "Basílica paleocristiana del siglo V en el Aventino",
+          time: "17:30",
+          category: "landmark",
+          optional: true
+        },
+        {
+          id: "pasticceria-regoli",
+          name: "Pasticceria Regoli",
+          lat: 41.8948,
+          lng: 12.5009,
+          description: "Pastelería histórica. Famosa por su maritozzo",
+          time: "15:30",
+          category: "cafe",
+          optional: true
         }
       ]
     },
@@ -505,15 +523,6 @@ const TRIP_DATA = {
           category: "landmark"
         },
         // Café
-        {
-          id: "faro-coffee",
-          name: "Faro",
-          lat: 41.8967,
-          lng: 12.4770,
-          description: "Specialty coffee. De los mejores de Roma",
-          time: "09:00",
-          category: "cafe"
-        },
         {
           id: "caffe-greco",
           name: "Antico Caffè Greco",
@@ -568,15 +577,6 @@ const TRIP_DATA = {
           lng: 12.4825,
           description: "Bar en la Galleria Nazionale. Terraza en el parque",
           time: "18:00",
-          category: "tragos"
-        },
-        {
-          id: "blackmarket-hall",
-          name: "Blackmarket Hall",
-          lat: 41.8950,
-          lng: 12.4923,
-          description: "Speakeasy en Monti. Cócteles creativos",
-          time: "22:00",
           category: "tragos"
         },
         // Opcionales
