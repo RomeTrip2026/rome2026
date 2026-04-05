@@ -304,7 +304,17 @@ const MapModule = (() => {
   }
 
   function flyTo(lng, lat) {
-    map.flyTo({ center: [lng, lat], zoom: 15, duration: 800 });
+    // If panel is open on mobile, offset so the point lands in visible map area
+    const panel = document.getElementById("panel");
+    let padding = {};
+    if (panel && panel.classList.contains("open") && window.innerWidth < 768) {
+      const panelH = panel.getBoundingClientRect().height;
+      const mapH = map.getContainer().clientHeight;
+      const visibleH = mapH - panelH;
+      // Place the point at ~1/5 from top of visible area → pad top small, pad bottom = panelH + extra
+      padding = { top: visibleH * 0.2, bottom: panelH + visibleH * 0.2 };
+    }
+    map.flyTo({ center: [lng, lat], zoom: 15, duration: 800, padding });
   }
 
   function geolocate() {
