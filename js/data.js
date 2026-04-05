@@ -18,8 +18,8 @@ const TRIP_DATA = {
         {
           id: "puelo-cafe",
           name: "Puelo Café",
-          lat: -33.397500,
-          lng: -70.596000,
+          lat: -33.406723,
+          lng: -70.598465,
           description: "Specialty coffee en Las Catalpas, Vitacura",
           time: "10:00",
           category: "cafe"

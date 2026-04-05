@@ -4,6 +4,7 @@ const MapModule = (() => {
   let currentPopup = null;
   let routeLayerAdded = false;
   let visitedSetRef = new Set();
+  let lastUserPosition = null; // cached from GeolocateControl
 
   // SVG templates for category icons (white stroke, no background)
   const ICON_SVGS = {
@@ -99,6 +100,11 @@ const MapModule = (() => {
       showUserHeading: true,
     });
     map.addControl(geoControl);
+
+    // Cache user position from the geolocate control
+    geoControl.on("geolocate", (e) => {
+      lastUserPosition = { lat: e.coords.latitude, lng: e.coords.longitude };
+    });
 
     // Auto-activate GPS tracking once map loads
     map.on("load", () => {
@@ -302,6 +308,10 @@ const MapModule = (() => {
   }
 
   function geolocate() {
+    // Use cached position from GeolocateControl if available
+    if (lastUserPosition) {
+      return Promise.resolve(lastUserPosition);
+    }
     return new Promise((resolve, reject) => {
       if (!navigator.geolocation) {
         reject(new Error("Geolocalización no disponible"));
