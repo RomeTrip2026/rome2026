@@ -570,7 +570,7 @@ const TRIP_DATA = {
     },
     {
       date: "2026-04-12",
-      label: "12 Abr — Salida",
+      label: "12 Abr — Salida Roma",
       color: "#95A5A6",
       places: [
         {
@@ -581,6 +581,58 @@ const TRIP_DATA = {
           description: "Último café antes de salir",
           time: "09:00",
           category: "cafe"
+        }
+      ]
+    },
+    {
+      date: "2026-04-12",
+      label: "12 Abr — París",
+      color: "#E74C3C",
+      places: [
+        {
+          id: "grand-palais",
+          name: "Grand Palais",
+          lat: 48.8662,
+          lng: 2.3125,
+          description: "Monumental palacio de cristal y acero de 1900",
+          time: "16:15",
+          category: "landmark"
+        },
+        {
+          id: "pont-alexandre-iii",
+          name: "Pont Alexandre III",
+          lat: 48.8637,
+          lng: 2.3136,
+          description: "El puente más elegante de París sobre el Sena",
+          time: "17:00",
+          category: "landmark"
+        },
+        {
+          id: "pont-des-arts",
+          name: "Pont des Arts",
+          lat: 48.8584,
+          lng: 2.3374,
+          description: "Puente peatonal frente al Louvre y el Institut de France",
+          time: "17:45",
+          category: "landmark"
+        },
+        {
+          id: "square-vert-galant",
+          name: "Square du Vert-Galant",
+          lat: 48.8572,
+          lng: 2.3414,
+          description: "Jardín en la punta de la Île de la Cité. Atardecer a las 20:37",
+          time: "19:00",
+          category: "landmark"
+        },
+        {
+          id: "grande-cremerie",
+          name: "La Grande Crèmerie",
+          lat: 48.8530,
+          lng: 2.3390,
+          description: "Wine bar con charcutería y quesos artesanales en Saint-Germain",
+          time: "21:00",
+          category: "comida"
         }
       ]
     }

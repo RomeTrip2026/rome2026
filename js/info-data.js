@@ -475,6 +475,56 @@ const PLACE_INFO = {
       <h3>Tips</h3>
       <p>Reservar con antelación. Menú degustación excelente. Buena carta de vinos naturales. Algo alejado del centro — tomar metro línea B hasta Garbatella.</p>
     `
+  },
+
+  "grand-palais": {
+    title: "Grand Palais",
+    html: `
+      <p>El <strong>Grand Palais</strong> fue construido para la Exposición Universal de 1900 junto con el Petit Palais y el Pont Alexandre III. Su espectacular <strong>nave de cristal y acero</strong> de 240 metros de largo y 45 metros de altura es una de las estructuras más impresionantes de París.</p>
+      <p>Combina estilos Beaux-Arts, Art Nouveau y Art Déco. Fue restaurado completamente entre 2021 y 2024, reabriendo con su esplendor original. Alberga grandes exposiciones temporales, ferias y eventos. Durante los Juegos Olímpicos de París 2024 fue sede de esgrima y taekwondo.</p>
+      <h3>Tips</h3>
+      <p>La fachada principal da a la Avenue Winston Churchill. Impresionante de ver desde fuera, especialmente con la luz de la tarde. Si hay exposición interesante, las entradas se compran online. El techo de cristal es más espectacular desde el interior.</p>
+    `
+  },
+
+  "pont-alexandre-iii": {
+    title: "Pont Alexandre III",
+    html: `
+      <p>Considerado el <strong>puente más bello de París</strong>, fue inaugurado en 1900 para la Exposición Universal. Conecta los Champs-Élysées con Les Invalides. Lleva el nombre del zar Alejandro III de Rusia, celebrando la alianza franco-rusa de 1892.</p>
+      <p>Está decorado con <strong>querubines, ninfas y pegasos dorados</strong> en sus cuatro pilones de 17 metros. Es un arco de acero de un solo tramo de 107 metros para no obstruir la vista entre los Champs-Élysées y Les Invalides. Al atardecer, los dorados brillan espectacularmente.</p>
+      <h3>Tips</h3>
+      <p>Cruzarlo a pie con calma — las vistas del Sena, la Torre Eiffel y Les Invalides son increíbles. Las mejores fotos se sacan desde los extremos. Monumento histórico clasificado.</p>
+    `
+  },
+
+  "pont-des-arts": {
+    title: "Pont des Arts",
+    html: `
+      <p>El <strong>Pont des Arts</strong> es un puente peatonal que cruza el Sena entre el Institut de France y el Palais du Louvre. El puente original fue construido entre 1801 y 1804 por orden de Napoleón, siendo el primer puente metálico de París.</p>
+      <p>Se hizo mundialmente famoso por los <strong>"candados del amor"</strong> que las parejas colgaban en sus barandas, tradición que fue prohibida en 2015 cuando el peso de los candados (45 toneladas) amenazó la estructura. Hoy tiene paneles de vidrio. Es un lugar favorito de artistas, músicos callejeros y paseantes.</p>
+      <h3>Tips</h3>
+      <p>Excelente punto para fotos del Sena con la Île de la Cité de fondo. Desde aquí se ve la cúpula del Institut de France y el Louvre. Lugar perfecto para sentarse a disfrutar la vista con un vino.</p>
+    `
+  },
+
+  "square-vert-galant": {
+    title: "Square du Vert-Galant",
+    html: `
+      <p>Pequeño jardín triangular en la <strong>punta occidental de la Île de la Cité</strong>, al nivel del agua del Sena. Lleva el nombre del apodo del rey Enrique IV ("le Vert-Galant" — el galán siempre verde), cuya estatua ecuestre está en el Pont Neuf justo encima.</p>
+      <p>Es uno de los <strong>rincones más románticos y tranquilos de París</strong>, rodeado de sauces llorones. Desde aquí se ven el Louvre, el Pont des Arts y los bateaux mouches pasando. Al estar bajo el nivel de la calle, se siente como un mundo aparte del bullicio de la ciudad.</p>
+      <h3>Tips</h3>
+      <p>Se accede bajando las escaleras desde el Pont Neuf. Ideal para el atardecer — <strong>sunset el 12 de abril: 20:37</strong>. Llevar algo para sentarse en el pasto junto al agua. No hay servicios ni cafetería. El acceso cierra al anochecer.</p>
+    `
+  },
+
+  "grande-cremerie": {
+    title: "La Grande Crèmerie",
+    html: `
+      <p><strong>La Grande Crèmerie</strong> es un wine bar y restaurante en el corazón de Saint-Germain-des-Prés, en la Rue Grégoire de Tours. Fundado en 2013 por Serge y Hélène Mathieu, antiguos arquitectos que descubrieron el local original "La Crèmerie" en 2006.</p>
+      <p>Especializado en <strong>vinos naturales franceses</strong> acompañados de tablas generosas de <strong>charcutería francesa, ibérica e italiana</strong>, quesos artesanales, foie gras, salmón ahumado y una burrata excepcional. El ambiente es íntimo y acogedor, con paredes de piedra y luz tenue.</p>
+      <h3>Tips</h3>
+      <p>Pedir una tabla mixta para compartir con quesos y charcutería. El vino lo eligen ellos si les dices qué te gusta. Abierto de martes a sábado. Domingos abierto. Lugar pequeño — llegar temprano o reservar. Dirección: 8 Rue Grégoire de Tours, 75006.</p>
+    `
   }
 };
 
