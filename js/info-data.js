@@ -507,6 +507,36 @@ const PLACE_INFO = {
     `
   },
 
+  "nicolas-buci": {
+    title: "Nicolas — Vinos",
+    html: `
+      <p><strong>Nicolas</strong> es la cadena de vinotecas más antigua de Francia, fundada en 1822. La sucursal del 13 Rue de Buci está en el corazón de Saint-Germain-des-Prés, una de las calles más encantadoras del barrio.</p>
+      <p>Tienen excelente selección de vinos franceses a todos los precios. Los vendedores suelen ser conocedores y pueden recomendar según tu presupuesto y gusto.</p>
+      <h3>Tips</h3>
+      <p><strong>Domingo: abierto hasta las 19:00.</strong> Pedir que te la den abierta o elegir una botella de tapa rosca si no llevas sacacorchos. Para un picnic junto al Sena, un Côtes du Rhône o un Beaujolais son buenas opciones accesibles.</p>
+    `
+  },
+
+  "boulangerie-arts-gourmands": {
+    title: "Boulangerie Les Arts Gourmands",
+    html: `
+      <p>Boulangerie artesanal en el 26 Rue Saint-André des Arts, una calle peatonal animada del Barrio Latino. Sus <strong>baguettes tradicionales</strong> son ideales para acompañar quesos franceses.</p>
+      <p>La Rue Saint-André des Arts es una de las calles más antiguas de la Rive Gauche, llena de pequeños restaurantes, librerías y tiendas artesanales.</p>
+      <h3>Tips</h3>
+      <p><strong>Abierta hasta las 21:00.</strong> Pedir la baguette tradition (la clásica, con corteza crujiente). Si tienen croissants sobrantes del día, son buena opción también.</p>
+    `
+  },
+
+  "monoprix-st-michel": {
+    title: "Monoprix — Quesos y Variados",
+    html: `
+      <p><strong>Monoprix</strong> en el 24 Boulevard Saint-Michel es un supermercado francés con una excelente <strong>sección de quesos franceses</strong>. Es la opción más cómoda para comprar todo en un solo lugar: quesos, charcutería, frutas y bebidas.</p>
+      <p>Monoprix es una cadena francesa premium que combina supermercado con tienda por departamentos. Su selección de quesos suele incluir Comté, Brie de Meaux, Roquefort, Reblochon y más, a precios razonables.</p>
+      <h3>Tips</h3>
+      <p><strong>Domingo: abierto hasta las 19:40.</strong> Ir primero aquí si quieres resolver todo rápido. Buscar la sección "fromages à la coupe" (quesos al corte) para mejor calidad. Comprar también un cuchillo plástico si no llevas.</p>
+    `
+  },
+
   "sainte-chapelle": {
     title: "Sainte-Chapelle",
     html: `

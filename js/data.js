@@ -626,6 +626,33 @@ const TRIP_DATA = {
           category: "landmark"
         },
         {
+          id: "nicolas-buci",
+          name: "Nicolas (vino)",
+          lat: 48.8537,
+          lng: 2.3363,
+          description: "Tienda de vinos. Pedir botella abierta o tapa rosca. Cierra 19:00 dom",
+          time: "18:45",
+          category: "tragos"
+        },
+        {
+          id: "boulangerie-arts-gourmands",
+          name: "Boulangerie Les Arts Gourmands",
+          lat: 48.8528,
+          lng: 2.3420,
+          description: "Baguettes tradicionales perfectas para el queso. Cierra 21:00",
+          time: "18:50",
+          category: "comida"
+        },
+        {
+          id: "monoprix-st-michel",
+          name: "Monoprix (queso y variados)",
+          lat: 48.8510,
+          lng: 2.3440,
+          description: "Sección de quesos franceses muy completa. Cierra 19:40 dom",
+          time: "18:55",
+          category: "comida"
+        },
+        {
           id: "square-vert-galant",
           name: "Square du Vert-Galant",
           lat: 48.8572,
