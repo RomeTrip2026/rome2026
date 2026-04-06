@@ -507,6 +507,16 @@ const PLACE_INFO = {
     `
   },
 
+  "sainte-chapelle": {
+    title: "Sainte-Chapelle",
+    html: `
+      <p>La <strong>Sainte-Chapelle</strong> fue construida entre 1242 y 1248 por orden del rey Luis IX (San Luis) para albergar las reliquias de la Pasión de Cristo, incluyendo la Corona de Espinas. Es una obra maestra del <strong>gótico radiante</strong>.</p>
+      <p>La capilla superior tiene <strong>15 vitrales de 15 metros de altura</strong> que representan 1.113 escenas bíblicas. Cuando el sol los atraviesa, el interior se transforma en un caleidoscopio de luz. Es considerada una de las mayores hazañas arquitectónicas del mundo occidental.</p>
+      <h3>Tips</h3>
+      <p>Última entrada generalmente 45 min antes del cierre (varía por temporada, consultar horarios). Entrada ~€11.50. Visitar con sol para ver los vitrales en su esplendor. Está dentro del recinto del Palais de Justice en la Île de la Cité. A 3 minutos del Square du Vert-Galant.</p>
+    `
+  },
+
   "square-vert-galant": {
     title: "Square du Vert-Galant",
     html: `

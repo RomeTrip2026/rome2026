@@ -617,6 +617,15 @@ const TRIP_DATA = {
           category: "landmark"
         },
         {
+          id: "sainte-chapelle",
+          name: "Sainte-Chapelle",
+          lat: 48.8554,
+          lng: 2.3451,
+          description: "Capilla gótica del siglo XIII con vitrales espectaculares",
+          time: "18:30",
+          category: "landmark"
+        },
+        {
           id: "square-vert-galant",
           name: "Square du Vert-Galant",
           lat: 48.8572,
