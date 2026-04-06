@@ -622,7 +622,7 @@ const TRIP_DATA = {
           lat: 48.8554,
           lng: 2.3451,
           description: "Capilla gótica del siglo XIII con vitrales espectaculares",
-          time: "18:30",
+          time: "18:00",
           category: "landmark"
         },
         {
@@ -631,7 +631,7 @@ const TRIP_DATA = {
           lat: 48.8537,
           lng: 2.3363,
           description: "Tienda de vinos. Pedir botella abierta o tapa rosca. Cierra 19:00 dom",
-          time: "18:45",
+          time: "18:20",
           category: "tragos"
         },
         {
@@ -640,7 +640,7 @@ const TRIP_DATA = {
           lat: 48.8528,
           lng: 2.3420,
           description: "Baguettes tradicionales perfectas para el queso. Cierra 21:00",
-          time: "18:50",
+          time: "18:30",
           category: "comida"
         },
         {
@@ -649,7 +649,7 @@ const TRIP_DATA = {
           lat: 48.8510,
           lng: 2.3440,
           description: "Sección de quesos franceses muy completa. Cierra 19:40 dom",
-          time: "18:55",
+          time: "18:40",
           category: "comida"
         },
         {
