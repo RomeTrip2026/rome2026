@@ -537,6 +537,16 @@ const PLACE_INFO = {
     `
   },
 
+  "notre-dame": {
+    title: "Notre-Dame de Paris",
+    html: `
+      <p><strong>Notre-Dame de Paris</strong> es la catedral gótica más famosa del mundo, construida entre 1163 y 1345. El incendio del 15 de abril de 2019 destruyó la aguja y parte del techo, pero la estructura principal y las torres sobrevivieron. Fue restaurada y <strong>reabierta el 7 de diciembre de 2024</strong>.</p>
+      <p>Su fachada occidental con las dos torres de 69 metros, los rosetones de 13 metros de diámetro y los arbotantes son iconos de la arquitectura medieval. Situada en la Île de la Cité, en el corazón geográfico e histórico de París.</p>
+      <h3>Tips</h3>
+      <p>Pasar por fuera para apreciar la fachada restaurada. La vista desde el lado sur (quai de Montebello) muestra los arbotantes espectaculares. Está a 3 minutos caminando de Sainte-Chapelle. La entrada a la catedral es gratuita pero las colas pueden ser largas.</p>
+    `
+  },
+
   "sainte-chapelle": {
     title: "Sainte-Chapelle",
     html: `
